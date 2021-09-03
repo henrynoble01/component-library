@@ -1,0 +1,14 @@
+.sidebar {
+  @apply bg-gray-200 fixed w-52 top-0  left-0 h-full overflow-y-auto;
+}
+
+.sidebar-list {
+  @apply h-auto pl-2;
+}
+.sidebar-item {
+  @apply flex items-baseline text-2xl cursor-pointer gap-x-1;
+}
+
+.header {
+  @apply text-2xl !important;
+}
