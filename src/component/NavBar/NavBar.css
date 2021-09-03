@@ -1,0 +1,10 @@
+.nav {
+  @apply bg-red-400 flex justify-between items-center px-6;
+  height: 70px;
+}
+
+.logo {
+  @apply text-5xl border-green-400 border-2 cursor-pointer text-white;
+}
+
+/* https://4r04d.csb.app/#! */

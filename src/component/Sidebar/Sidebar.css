@@ -1,12 +1,14 @@
 .sidebar {
-  @apply bg-gray-200 fixed w-52 top-0  left-0 h-full overflow-y-auto;
+  @apply bg-gray-200 fixed left-0  overflow-y-auto;
+  height: 95%;
+  top: 70px;
 }
 
 .sidebar-list {
   @apply h-auto pl-2;
 }
 .sidebar-item {
-  @apply flex items-baseline text-2xl cursor-pointer gap-x-1;
+  @apply flex items-baseline text-2xl cursor-pointer ml-4 my-4 w-full  gap-x-1 !important;
 }
 
 .header {
