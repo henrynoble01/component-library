@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToggleContext } from "../../Context/ToggleContexts";
 // import { Icon } from "semantic-ui-react";
 import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +8,10 @@ import {
   faArrowAltCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = ({ toggle }) => {
+const NavBar = () => {
+  const [, setToggleBtn] = useContext(ToggleContext);
+  const toggle = () => setToggleBtn((val) => !val);
+
   return (
     <nav className='nav'>
       <div className='left-section'>

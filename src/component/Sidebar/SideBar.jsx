@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ToggleContext } from "../../Context/ToggleContexts";
 // import PropTypes from "prop-types";
 // import { Header, Icon, List } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -18,7 +19,9 @@ const nav = [
   { id: 4, text: "EcoPrefrences", link: "/EcoPrefrences", icon: faHome },
 ];
 
-const SideBar = ({ toggleBtn }) => {
+const SideBar = () => {
+  const [toggleBtn] = useContext(ToggleContext);
+
   return (
     <div className={`${toggleBtn ? "w-24 " : "w-64"} sidebar`}>
       <ul className={` sidebar-list`}>
