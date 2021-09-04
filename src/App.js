@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <SideBar />
         <NavBar />
+        <SideBar />
         {/* <nav>
           <ul>
             <li>

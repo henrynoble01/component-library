@@ -1,16 +1,57 @@
-.sidebar {
+/* .sidebar {
   @apply bg-gray-200 fixed left-0  overflow-y-auto;
   height: 95%;
   top: 70px;
+} */
+
+/* .sidebar-list {
+  @apply h-auto;
+} */
+
+/* .sidebar.collapsed{
+  width: 70px;
+} */
+
+/* .sidebar-item {
+  @apply flex items-baseline  text-3xl capitalize cursor-pointer my-4 w-full  gap-x-3;
+  @apply text-gray-700;
+} */
+
+/* .sidebar-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
+/* .text {
+  @apply text-2xl text-gray-700;
+} */
+/* .header-collapsed {
+  @apply text-base text-center;
+} */
+/* .header-ok {
+  @apply text-2xl;
+} */
+
+.sidebar {
+  @apply fixed bg-gray-200 h-full;
+  top: 70px;
+  height: calc(95%-70px);
 }
 
-.sidebar-list {
-  @apply h-auto pl-2;
-}
-.sidebar-item {
-  @apply flex items-baseline text-2xl cursor-pointer ml-4 my-4 w-full  gap-x-1 !important;
+.sidebar .sidebar-list {
+  @apply h-auto w-full;
 }
 
-.header {
-  @apply text-2xl !important;
+.sidebar-list .sidebar-item {
+  @apply p-3;
+}
+
+.sidebar-item .sidebar-link {
+  @apply flex gap-x-2 text-2xl text-gray-700 font-semibold;
+}
+.sidebar-item .sidebar-link.collapsed {
+  @apply flex-col justify-center items-center;
+}
+
+.sidebar-link.collapsed .text {
+  @apply text-xs;
 }
