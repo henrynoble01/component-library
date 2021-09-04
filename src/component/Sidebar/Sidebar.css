@@ -1,36 +1,3 @@
-/* .sidebar {
-  @apply bg-gray-200 fixed left-0  overflow-y-auto;
-  height: 95%;
-  top: 70px;
-} */
-
-/* .sidebar-list {
-  @apply h-auto;
-} */
-
-/* .sidebar.collapsed{
-  width: 70px;
-} */
-
-/* .sidebar-item {
-  @apply flex items-baseline  text-3xl capitalize cursor-pointer my-4 w-full  gap-x-3;
-  @apply text-gray-700;
-} */
-
-/* .sidebar-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
-
-/* .text {
-  @apply text-2xl text-gray-700;
-} */
-/* .header-collapsed {
-  @apply text-base text-center;
-} */
-/* .header-ok {
-  @apply text-2xl;
-} */
-
 .sidebar {
   @apply fixed bg-gray-200 h-full;
   top: 70px;

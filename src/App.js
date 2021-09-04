@@ -1,29 +1,25 @@
-// import { Route, BrowserRouter as Router } from "react-router-dom";
-import { Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
-import Home from "./pages/Home";
-import EcoPrefrences from "./pages/EcoPrefrences";
+import React, { useState } from "react";
+
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+// import Home from "./pages/Home";
 import { SideBar, NavBar } from "./component/index";
+import { EcoPrefenceWrapper } from "./pages/index";
 
 function App() {
+  const [toggleBtn, setToggleBtn] = useState(false);
+  const toggle = () => setToggleBtn((val) => !val);
   return (
     <Router>
       <div className='App'>
-        <NavBar />
-        <SideBar />
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to='/'> Home </Link>
-            </li>
-            <li>
-              <Link to='/EcoPrefrences'> EcoPrefrences </Link>
-            </li>
-          </ul>
-        </nav> */}
+        <NavBar toggle={toggle} />
+        <SideBar toggleBtn={toggleBtn} />
+        {/* <ContentContainer toggleBtn={toggleBtn}>
+          <EcoPrefrences />
+        </ContentContainer> */}
 
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/EcoPrefrences' component={EcoPrefrences} />
+          {/* <Route path='/' exact component={Home} /> */}
+          <Route path='/EcoPrefrences' component={EcoPrefenceWrapper} />
         </Switch>
       </div>
     </Router>

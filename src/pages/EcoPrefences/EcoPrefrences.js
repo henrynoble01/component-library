@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Label, Table, Button, Input } from "semantic-ui-react";
-import data from "../data.json";
+import data from "../../data.json";
 // import "./style.css";
 
 export default function EcoPrefrences() {

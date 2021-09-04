@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import PropTypes from "prop-types";
 // import { Header, Icon, List } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -18,14 +18,12 @@ const nav = [
   { id: 4, text: "EcoPrefrences", link: "/EcoPrefrences", icon: faHome },
 ];
 
-const SideBar = () => {
-  const [collapsed, setCollapsed] = useState(true);
-
+const SideBar = ({ toggleBtn }) => {
   return (
-    <div className={`${collapsed ? "w-24 " : "w-64"} sidebar`}>
+    <div className={`${toggleBtn ? "w-24 " : "w-64"} sidebar`}>
       <ul className={` sidebar-list`}>
         {nav.map((item) => (
-          <SideBarItem key={item.id} {...item} collapsed={collapsed} />
+          <SideBarItem key={item.id} {...item} collapsed={toggleBtn} />
         ))}
       </ul>
     </div>
@@ -34,7 +32,7 @@ const SideBar = () => {
 
 const SideBarItem = ({ link, icon, text, collapsed }) => (
   <li className={`${collapsed ? "flex-col " : "flex-row"} sidebar-item`}>
-    <Link to={link} className={`${collapsed ? "collapsed" : ""} sidebar-link`}>
+    <Link to={link} className={`${collapsed ? "collapsed" : " "} sidebar-link`}>
       <span>
         <FontAwesomeIcon icon={icon} />
       </span>

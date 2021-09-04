@@ -7,11 +7,11 @@ import {
   faArrowAltCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const NavBar = () => {
+const NavBar = ({ toggle }) => {
   return (
     <nav className='nav'>
       <div className='left-section'>
-        <div className='brand'>
+        <div className='brand' onClick={toggle}>
           <FontAwesomeIcon icon={faBars} />
           <span className='logo'> App Logo</span>
         </div>
