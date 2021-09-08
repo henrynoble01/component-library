@@ -1,6 +1,6 @@
 import React from "react";
 import EcoPrefrences from "./EcoPrefrences";
-import { ContentContainer } from "../../component/index";
+import { ContentContainer } from "../../components/index";
 
 const EcoPrefenceWrapper = () => {
   return (
