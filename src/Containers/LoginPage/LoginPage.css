@@ -1,0 +1,54 @@
+.content {
+  @apply bg-gray-300 min-h-screen flex flex-col justify-center items-center;
+}
+.content .login-area {
+  @apply bg-red-300 py-5 px-6 w-96  text-white rounded-2xl;
+  width: 360px;
+}
+.login-area h5 {
+  @apply text-3xl mb-8;
+}
+
+.login-area .form-extra {
+  @apply flex justify-between;
+}
+
+.login-area label {
+  @apply text-white text-base capitalize !important;
+}
+
+.login-area .extra-details {
+  @apply mt-12 flex flex-col gap-y-8;
+}
+
+.extra-details h6 {
+  @apply text-2xl font-normal capitalize;
+}
+
+.extra-details p {
+  @apply text-base;
+}
+
+.extra-details .social-icons {
+  @apply flex flex-col gap-y-2;
+}
+
+.social-icons .brand-icons {
+  @apply flex gap-x-3 text-5xl  cursor-pointer;
+}
+
+.brand-icons > * {
+  @apply transform hover:scale-110;
+}
+
+.extra-details .forgot-password {
+  @apply flex flex-col gap-y-4;
+}
+
+.extra-details .sign-up {
+  @apply border-dotted border-t-2 border-white border-opacity-80;
+}
+
+.sign-up p {
+  @apply my-7 !important;
+}
