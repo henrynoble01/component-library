@@ -1,11 +1,11 @@
 .nav {
   @apply bg-red-400 flex justify-between items-center px-6;
-  @apply fixed top-0 right-0 w-full;
+  @apply fixed top-0 right-0 w-full text-white;
   height: 70px;
 }
 
 .brand {
-  @apply text-6xl  cursor-pointer text-white;
+  @apply text-6xl  cursor-pointer;
   @apply flex flex-row gap-x-2 justify-center items-center;
 }
 
@@ -13,4 +13,7 @@
   @apply text-3xl font-bold;
 }
 
+.right-section {
+  @apply flex gap-x-4;
+}
 /* https://4r04d.csb.app/#! */

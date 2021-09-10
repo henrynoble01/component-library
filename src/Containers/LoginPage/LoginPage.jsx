@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Button, Checkbox, Form, Input, Header } from "semantic-ui-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,13 +8,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import "./LoginPage.css";
 
+import { AuthContext } from "../../App";
+
 const LoginPage = () => {
+  const { dispatch } = useContext(AuthContext);
   return (
     <div className='content'>
       <Header as='h1' color='teal'>
         Cad Consulting Limited
       </Header>
-      <LoginArea />
+      <LoginArea dispatch={dispatch} />
       <Header size='tiny' color='teal' className='footer'>
         2017 - {new Date().getFullYear()}
         <span dangerouslySetInnerHTML={{ __html: " &copy " }} />
@@ -24,11 +27,41 @@ const LoginPage = () => {
   );
 };
 
-const LoginArea = () => {
+const initialState = {
+  email: "",
+  username: "",
+  password: "",
+  isSubmitting: false,
+  errorMessage: null,
+};
+
+const LoginArea = ({ dispatch }) => {
+  const [data, setData] = useState(initialState);
+
+  const handleInputChange = (event) => {
+    setData({
+      ...data,
+      [event.target.id]: event.target.value,
+    });
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setData({
+      ...data,
+      isSubmitting: true,
+      errorMessage: null,
+    });
+    dispatch({
+      type: "LOGIN",
+      payload: data,
+    });
+  };
+
   return (
     <div className='login-area'>
       <h5>Login to your account</h5>
-      <Form size='large'>
+      <Form size='large' onSubmit={handleFormSubmit}>
         <Form.Field
           required
           id='email'
@@ -39,6 +72,8 @@ const LoginArea = () => {
           icon='user'
           fluid
           iconPosition='left'
+          onChange={handleInputChange}
+          value={data.email}
         />
         <Form.Field
           required
@@ -49,6 +84,8 @@ const LoginArea = () => {
           placeholder='Password'
           icon='lock'
           iconPosition='left'
+          onChange={handleInputChange}
+          value={data.password}
         />
         <Form.Group className='form-extra'>
           <Form.Field>
