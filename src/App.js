@@ -3,7 +3,7 @@ import { ToggleProvider } from "./Context/ToggleContexts";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 // import Home from "./pages/Home";
 import { SideBar, NavBar } from "./components/index";
-import { EcoPrefenceWrapper, LoginPage } from "./Containers/index";
+import { EcoPrefenceWrapper, LoginPage, LandingPage } from "./Containers/index";
 
 export const AuthContext = createContext();
 const initialState = {
@@ -60,8 +60,9 @@ function App() {
           <div className='App'>
             {state.isAuthenticated ? (
               <>
-                <NavBar />
-                <SideBar />
+                {/* <NavBar />
+                <SideBar /> */}
+                <LandingPage />
               </>
             ) : (
               <LoginPage />
