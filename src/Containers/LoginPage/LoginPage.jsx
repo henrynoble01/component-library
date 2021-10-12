@@ -6,7 +6,7 @@ import {
   faTwitterSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import "./LoginPage.css";
+import "./LoginPage.module.css";
 
 import { AuthContext } from "../../App";
 
