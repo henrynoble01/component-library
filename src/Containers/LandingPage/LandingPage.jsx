@@ -1,30 +1,36 @@
 import React from "react";
 // import "./LandingPage.css";
-import { StyledLayout } from "./StyledLandingPage";
+import { StyledLayout, StyledNavigation } from "./StyledLandingPage";
+import { Images } from "../../Assets/Assets";
 
 const navItems = [
   {
     id: 0,
-    text: "Home",
+    text: "Logo",
     link: "#",
   },
   {
     id: 1,
-    text: "About",
+    text: "Home",
     link: "#",
   },
   {
     id: 2,
-    text: "Partners",
+    text: "About",
     link: "#",
   },
   {
     id: 3,
-    text: "Benefits",
+    text: "Partners",
     link: "#",
   },
   {
     id: 4,
+    text: "Benefits",
+    link: "#",
+  },
+  {
+    id: 5,
     text: "Subscription",
     link: "#",
   },
@@ -33,14 +39,29 @@ const navItems = [
 const LandingPage = () => {
   return (
     <StyledLayout>
-      <nav className='nav'>
+      <StyledNavigation>
         <ul className='nav-left'>
           {navItems.map((items) => (
-            <li key={items.id}>{items.text}</li>
+            <li className='nav-item' key={items.id}>
+              {items.text}
+            </li>
           ))}
         </ul>
-        <div className='nav-right'></div>
-      </nav>
+        <div className='nav-right'>
+          <div className='sign-up'>Sign Up</div>
+          <div className='sign-up'>Login</div>
+        </div>
+      </StyledNavigation>
+
+      <div className='welcome-banner'>
+        <div className='img-container'>
+          <img src={Images.BlinkHubLogo} alt='BlinkHubLogo' />
+        </div>
+        <div className='text'>
+          <h3>Welcome</h3>
+          <span>To the world of business support</span>
+        </div>
+      </div>
     </StyledLayout>
   );
 };
