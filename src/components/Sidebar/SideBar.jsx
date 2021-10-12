@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { ToggleContext } from "../../Context/ToggleContexts";
-// import PropTypes from "prop-types";
-// import { Header, Icon, List } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,7 +7,8 @@ import {
   faLocationArrow,
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
-import "./Sidebar.css";
+// import "./Sidebar.css";
+import { StyledSidebar } from "./StyledSidebar";
 
 const nav = [
   { id: 0, text: "home", link: "/", icon: faHome },
@@ -23,13 +22,13 @@ const SideBar = () => {
   const [toggleBtn] = useContext(ToggleContext);
 
   return (
-    <div className={`${toggleBtn ? "w-24 " : "w-64"} sidebar`}>
+    <StyledSidebar className={`${toggleBtn ? "w-24 " : "w-64"} `}>
       <ul className={` sidebar-list`}>
         {nav.map((item) => (
           <SideBarItem key={item.id} {...item} collapsed={toggleBtn} />
         ))}
       </ul>
-    </div>
+    </StyledSidebar>
   );
 };
 

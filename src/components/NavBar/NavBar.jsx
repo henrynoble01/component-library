@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { ToggleContext } from "../../Context/ToggleContexts";
-// import { Icon } from "semantic-ui-react";
 import { AuthContext } from "../../App";
-
-import "./NavBar.css";
+import { StyledNavBar } from "./StyledNavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -17,7 +15,7 @@ const NavBar = () => {
   const logout = () => dispatch({ type: "LOGOUT" });
 
   return (
-    <nav className='nav'>
+    <StyledNavBar>
       <div className='left-section'>
         <div className='brand' onClick={toggle}>
           <FontAwesomeIcon icon={faBars} />
@@ -30,7 +28,7 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faArrowAltCircleRight} />
         </div>
       </div>
-    </nav>
+    </StyledNavBar>
   );
 };
 export default NavBar;
