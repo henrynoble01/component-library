@@ -9,7 +9,7 @@ import {
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { onboarding, navItems } from "./data";
+import { onboarding, navItems, blinkhubBenefits } from "./data";
 
 const LandingPage = () => {
   return (
@@ -43,7 +43,7 @@ const LandingPage = () => {
       </StyledWelcomeBanner>
       <StyledDashBoard>
         <div className='content'>
-          <div className='item-1  left-one '>
+          <div className='item  left-one '>
             <div className='circle'>
               <h3>Onboarding</h3>
               <p>Complete These Steps to start working with blinkhub</p>
@@ -65,7 +65,8 @@ const LandingPage = () => {
               </ul>
             </div>
           </div>
-          <div className='item-1 right-one '>
+
+          <div className='item right-one '>
             <header>
               Business Clinic
               <FontAwesomeIcon className='icon' icon={faInfoCircle} />
@@ -75,9 +76,25 @@ const LandingPage = () => {
               allowing you to concentrate on running your business.
             </p>
           </div>
-          <div className='item-1 left-two  bg-yellow-300 h-4 '></div>
-          <div className='item-1 right-two bg-green-800 h-4 '></div>
-          <div className='item-1 bottom bg-green-400 h-4'></div>
+
+          <div className='item left-two   '>
+            <header className='header'>Blinkhub Benfits</header>
+            <div className='benefits'>
+              {blinkhubBenefits.map((item) => (
+                <div key={item.id} className='card'>
+                  <div className='circle '>
+                    <h3>{item.title}</h3>
+                  </div>
+                  <div className='text'>
+                    <FontAwesomeIcon icon={item.icon} />
+                    <span>{item.text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='item right-two bg-green-800 h-4 '></div>
+          <div className='item bottom bg-green-400 h-4'></div>
         </div>
       </StyledDashBoard>
     </StyledLayout>

@@ -162,6 +162,50 @@ export const StyledDashBoard = styled.div`
 
   .left-two {
     grid-area: left-2;
+    overflow: hidden;
+    background-color: var(--clr-white);
+    padding: 0 1rem;
+
+    .header {
+      font-size: var(--font-md);
+      font-weight: 700;
+      padding: 0.75rem 0;
+    }
+
+    .benefits {
+      overflow: auto;
+      height: 27rem;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.75rem;
+      background-color:var(--clr-grey-10);
+      padding:10px;
+    }
+    
+    .card {
+      display: flex;
+      position: relative;
+      box-shadow: var(--light-shadow);
+      gap: 0.75rem;
+      outline: 2px solid blue;
+      background-color:var(--clr-white);
+
+      .circle {
+        padding: 10px;
+        color: var(--clr-white);
+        font-size: var(--font-md);
+        font-weight: 700;
+        clip-path: ellipse(92% 126% at 5% 58%);
+        background-color: rgba(17, 24, 39, 1);
+        height:150px;
+        width:40%;
+    }
+
+    .text{
+      width:60%;
+    }
+      }
+    }
   }
 
   .right-two {
