@@ -2,7 +2,6 @@
   "name": "component-libary",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/henrynoble01/component-library",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",

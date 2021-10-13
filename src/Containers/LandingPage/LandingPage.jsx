@@ -5,6 +5,7 @@ import {
   StyledNavigation,
   StyledWelcomeBanner,
   StyledDashBoard,
+  StyledFooter,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,6 +22,11 @@ import {
   topBenfits,
   networkPartners,
 } from "./data";
+import {
+  faFacebookSquare,
+  faLinkedin,
+  faTwitterSquare,
+} from "@fortawesome/free-brands-svg-icons";
 
 const LandingPage = () => {
   const [index, setIndex] = useState(0);
@@ -71,26 +77,35 @@ const LandingPage = () => {
       </StyledWelcomeBanner>
       <StyledDashBoard>
         <div className='content'>
-          <div className='item  left-one '>
-            <div className='circle'>
-              <h3>Onboarding</h3>
-              <p>Complete These Steps to start working with blinkhub</p>
-              <p>2 Completed / 3</p>
-              <div className='steps stepper'>
+          <div className='item  left-one bg-white p-6 overflow-hidden '>
+            <div className='inner flex  '>
+              <div className='circle w-2/5 text-white'>
+                <h3 className='text-2xl  font-bold mb-3'>Onboarding</h3>
+                <p className=' text-lg w-11/12 font-semibold mb-3'>
+                  Complete These Steps to start working with blinkhub
+                </p>
+                <p className='text-lg font-normal'>2 Completed / 3</p>
+                {/* <div className='steps stepper'>
                 <div className='line completed'></div>
                 <div className='line completed'></div>
                 <div className='line '></div>
+              </div> */}
               </div>
-            </div>
-            <div className='steps-list'>
-              <ul>
-                {onboarding.map((item, index) => (
-                  <li key={index + item.text}>
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                    <span>{item.text}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className='steps-list w-3/5  flex items-center  pl-5 '>
+                <ul className='flex gap-y-3 flex-col  '>
+                  {onboarding.map((item, index) => (
+                    <li
+                      key={index + item.text}
+                      className='flex gap-x-3  items-start '>
+                      <FontAwesomeIcon
+                        icon={faCheckCircle}
+                        className='text-xl text-yellow-300'
+                      />
+                      <span className='text-lg'>{item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -159,6 +174,38 @@ const LandingPage = () => {
           </div>
         </div>
       </StyledDashBoard>
+
+      <StyledFooter>
+        <div className='content'>
+          <div className='top '>
+            <div className='logo img-container'>
+              <img src={Images.BlinkHubLogo} alt='BlinkHub Logo' />
+            </div>
+            <div className=''>
+              <header className='text-xl '>Business Ecosystem Linkages</header>
+              <div className='list  text-base   '>
+                <div className='item '>#30 trans woji road 2nd floor</div>
+                <div className='item '>Port Harcourt</div>
+                <div className='item '>Rivers State</div>
+                <div className='item '>Tel: +234 08033131904</div>
+              </div>
+            </div>
+
+            <div className=''>
+              <header>Legal</header>
+              <div className='list'>
+                <div className='item'>Terms and Conditions</div>
+                <div className='item'>Cookie Policy</div>
+              </div>
+            </div>
+          </div>
+          <div className='bottom'>
+            <FontAwesomeIcon className='text-3xl' icon={faTwitterSquare} />
+            <FontAwesomeIcon className='text-3xl' icon={faFacebookSquare} />
+            <FontAwesomeIcon className='text-3xl' icon={faLinkedin} />
+          </div>
+        </div>
+      </StyledFooter>
     </StyledLayout>
   );
 };

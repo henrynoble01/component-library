@@ -73,11 +73,11 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  @media screen and (min-width: 1536px) {
-    :root {
-      --container: 1536px;
-    }
-  }
+//   @media screen and (min-width: 1536px) {
+//     :root {
+//       --container: 1536px;
+//     }
+//   }
 
 
 `;
