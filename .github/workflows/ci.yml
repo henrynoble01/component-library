@@ -18,14 +18,11 @@ jobs:
         with: 
           node-version: 13.x
       
-      - name: Install Yarn
-      run: npm install --global yarn 
-
       - name: Install NPM packages
-      run: yarn install
+        run: npm ci
 
       - name: Build project
-      run: yarn run build
+        run: npm run build
 
       - name: Upload production-ready build files
       run: actions/upload-artifact-@v2
