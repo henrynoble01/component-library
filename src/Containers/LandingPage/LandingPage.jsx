@@ -24,7 +24,7 @@ import {
 
 const LandingPage = () => {
   const [index, setIndex] = useState(0);
-  const { title, text, icon } = blinkhubBenefits[index];
+  const { title, text, images } = blinkhubBenefits[index];
 
   const checkIndex = (number) => {
     if (number > blinkhubBenefits.length - 1) {
@@ -124,7 +124,7 @@ const LandingPage = () => {
                   </div>
                 </div>
                 <div className='text'>
-                  <FontAwesomeIcon className='icon' icon={icon} />
+                  <img src={images} alt={title} className='icon' />
                   <span>{text}</span>
                 </div>
                 <div onClick={next} className='next'>

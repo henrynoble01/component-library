@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     --font-xs: 13px;
     --font-sm: 14px;
     --font-md: 20px;
+    --font-xm: 16px;
     --font-base: 2em;
     --font-lg: 32px;
     --container: 100%;

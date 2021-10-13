@@ -67,6 +67,7 @@ export const StyledDashBoard = styled.div`
   width: 100%;
   background-color: var(--clr-grey-10);
   padding-top: 30px;
+  padding-bottom:30px;
 
   .content {
     width: var(--container);
@@ -247,12 +248,16 @@ box-shadow: var(--light-shadow);
       font-size: var(--font-sm);
       font-weight: 700;
       display:flex;
+      align-items: flex-start;
+      gap:.875em;
       
       .icon{
-        font-size:var(--font-md);
-        border: 2px solid var(--clr-primary-5);
-        color:var(--clr-primary-5);
-        border-radius:50%;
+        width:10%;
+      }
+
+      span{
+        width:90%;
+        font-size: var(--font-xm) ;
       }
     }
 
@@ -271,25 +276,24 @@ box-shadow: var(--light-shadow);
   .right-two {
     grid-area: right-2;
     background-color:var(--clr-white);
-    padding: 15px;
+    padding: 5px 0 0 10px ;
 
     header{
       font-size: var(--font-md);
       font-weight:700;
+      margin-bottom:5px;
     }
 
     section{
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      row-gap : 1em;
       height: 100%;
     }
     article{
-      display: block;
       
-
       h4{
-        font-size: var(--font-sm);
+        font-size: var(--font-xm);
         font-weight : 700;
       }
 
@@ -305,35 +309,35 @@ box-shadow: var(--light-shadow);
     background-color:var(--clr-white);
     padding: 1rem;
 
-    header{
-      color:var(--clr-primary-3);
-      font-size: var(--font-base);
-      font-weight:700;
-      margin-bottom:1em;
-    }
+      header{
+        color:var(--clr-primary-3);
+        font-size: var(--font-base);
+        font-weight:700;
+        margin-bottom:1em;
+      }
 
-  section{
-    display: flex;
-    flex-flow: row wrap;
-    gap : 1em;
+      section{
+        display: flex;
+        flex-flow: row wrap;
+        gap : 1em;
 
-    &>*{
-      /* <flex-grow>  <flex-shrink> <flex-basis> */
-      flex: 1 1 30%;
-    }
-  }
+        &>*{
+          /* <flex-grow>  <flex-shrink> <flex-basis> */
+          flex: 1 1 30%;
+        }
+      }
 
-  .network{
-    h4{
-      color: var(--clr-primary-3);
-      font-size: var(--font-sm);
-      font-weight: 700;
-    }
+      .network{
+        h4{
+          color: var(--clr-primary-3);
+          font-size: var(--font-sm);
+          font-weight: 700;
+        }
 
-    p{
-      font-size: var(--font-xs);
-      font-weight: 600;
-    }
+        p{
+          font-size: var(--font-xs);
+          font-weight: 600;
+        }
   }
   }
 `;
