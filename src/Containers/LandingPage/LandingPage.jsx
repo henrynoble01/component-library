@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./LandingPage.css";
 import {
   StyledLayout,
@@ -8,10 +8,38 @@ import {
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckCircle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { onboarding, navItems, blinkhubBenefits } from "./data";
+import {
+  faCheckCircle,
+  faChevronLeft,
+  faChevronRight,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  onboarding,
+  navItems,
+  blinkhubBenefits,
+  topBenfits,
+  networkPartners,
+} from "./data";
 
 const LandingPage = () => {
+  const [index, setIndex] = useState(0);
+  const { title, text, icon } = blinkhubBenefits[index];
+
+  const checkIndex = (number) => {
+    if (number > blinkhubBenefits.length - 1) {
+      return 0;
+    }
+    return number;
+  };
+
+  const next = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return checkIndex(newIndex);
+    });
+  };
+
   return (
     <StyledLayout>
       <StyledNavigation>
@@ -80,21 +108,55 @@ const LandingPage = () => {
           <div className='item left-two   '>
             <header className='header'>Blinkhub Benfits</header>
             <div className='benefits'>
-              {blinkhubBenefits.map((item) => (
-                <div key={item.id} className='card'>
-                  <div className='circle '>
-                    <h3>{item.title}</h3>
-                  </div>
-                  <div className='text'>
-                    <FontAwesomeIcon icon={item.icon} />
-                    <span>{item.text}</span>
+              <div className='card'>
+                <div className='circle '>
+                  <h3>Top {blinkhubBenefits.length} Benefits of BlinkHub</h3>
+                  <p>{title}</p>
+                  <div className='slide-index '>
+                    {blinkhubBenefits.map((element, i) => (
+                      <>
+                        <div
+                          className={`position  ${
+                            i <= index ? "bg-yellow-500" : "bg-red-900"
+                          }`}></div>
+                      </>
+                    ))}
                   </div>
                 </div>
-              ))}
+                <div className='text'>
+                  <FontAwesomeIcon className='icon' icon={icon} />
+                  <span>{text}</span>
+                </div>
+                <div onClick={next} className='next'>
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              </div>
             </div>
           </div>
-          <div className='item right-two bg-green-800 h-4 '></div>
-          <div className='item bottom bg-green-400 h-4'></div>
+
+          <div className='item right-two '>
+            <header>Top {topBenfits.length} Benefits</header>
+            <section>
+              {topBenfits.map((item) => (
+                <article>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </section>
+          </div>
+
+          <div className='item bottom '>
+            <header>Network of Partners</header>
+            <section>
+              {networkPartners.map((item) => (
+                <div className='network'>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </section>
+          </div>
         </div>
       </StyledDashBoard>
     </StyledLayout>

@@ -130,3 +130,57 @@ export const navItems = [
     link: "#",
   },
 ];
+
+export const topBenfits = [
+  {
+    title: "Linkage to Market",
+    text: "We link you to corporate markets, bulk buyers, processors, off-takers and international markets through PIND Business Linkage Initiative.",
+  },
+  {
+    title: "Business Support",
+    text: "Our business support and mentorship service will save you time and money, allowing you to concentrate on running your business.",
+  },
+  {
+    title: "Access to Finance",
+    text: "Our business advice and support will save you time and money, allowing you to concentrate on running your business.",
+  },
+];
+
+export const networkPartners = [
+  {
+    title: "Finance",
+    text: "Access to funding, improving cash flow, advice on credit and debt plus a free financial health check.",
+  },
+  {
+    title: "Payment Services",
+    text: "Merchant services, discounted terminals, tailored contracts and online payment solutions",
+  },
+  {
+    title: "Purchasing",
+    text: "Our purchasing partner provides buying power and purchasing know-how. Offering large savings for any small business.",
+  },
+  {
+    title: "Legal Services",
+    text: "Employment, Tax and HR advice as well as the free helpline and discounted specific legal services. ",
+  },
+  {
+    title: "Technology and IT",
+    text: "Technology advice and services at discounted rates",
+  },
+  {
+    title: "Health and Safety",
+    text: "Supported by our Health and Safety guide, our H&S partner provide trusted, practical Health and Safety support services to small to medium-sized companies.",
+  },
+  {
+    title: "Insurance",
+    text: "Free review of your existing cover and a tailored discounted insurance solution.",
+  },
+  {
+    title: "Marketing",
+    text: "Access to marketing services built around your business with a Blink hub discount, business planning, continuity, and succession planning.",
+  },
+  {
+    title: "Press and PR",
+    text: "A PR management service that gives you the platform to get your brand name in front of the people writing articles, commenting and interviewing  ",
+  },
+];

@@ -81,13 +81,17 @@ export const StyledDashBoard = styled.div`
     gap: 1.75rem;
   }
 
+  .item{
+box-shadow: var(--light-shadow);
+  }
+
   .left-one {
     grid-area: left-1;
     display: flex;
     position: relative;
     overflow: hidden;
     background-color: var(--clr-white);
-    box-shadow: var(--light-shadow);
+    
 
     & .circle {
       padding: 20px;
@@ -141,7 +145,6 @@ export const StyledDashBoard = styled.div`
     grid-area: right-1;
     padding: 0.75rem;
     background-color: var(--clr-white);
-    box-shadow: var(--light-shadow);
 
     header {
       font-size: var(--font-md);
@@ -164,7 +167,8 @@ export const StyledDashBoard = styled.div`
     grid-area: left-2;
     overflow: hidden;
     background-color: var(--clr-white);
-    padding: 0 1rem;
+    padding: 0 0 0 1em;
+    box-shadow: var(--light-shadow);
 
     .header {
       font-size: var(--font-md);
@@ -173,36 +177,92 @@ export const StyledDashBoard = styled.div`
     }
 
     .benefits {
-      overflow: auto;
-      height: 27rem;
-      display: flex;
-      flex-direction: column;
-      row-gap: 1.75rem;
-      background-color:var(--clr-grey-10);
-      padding:10px;
+      height: 19em;
+      overflow:hidden;
+
     }
     
     .card {
       display: flex;
-      position: relative;
       box-shadow: var(--light-shadow);
       gap: 0.75rem;
-      outline: 2px solid blue;
       background-color:var(--clr-white);
+      height:100%;
+      position: relative;
 
       .circle {
         padding: 10px;
         color: var(--clr-white);
+        // clip-path: ellipse(92% 84% at 7% 52%);
+        height:100%;
+        width:40%;
+        display:flex;
+        flex-flow: column wrap;
+        justify-content:space-between;
+        padding:10px 0 20px 10px;
+
+        & > * {
+        position: relative;
+      }
+
+      .slide-index{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        .position{
+          height:0.75em;
+          width:0.75em;
+
+          // .passed{}
+        }
+      }
+
+        &::before{
+        position: absolute;
+        content: "";
+        height:360px;
+        width:360px;
+        border-radius: 50%;
+        background-color: rgba(17,24,39,1);
+        top: -50px;
+        left: -83px;
+        }
+      }
+
+        h3{
         font-size: var(--font-md);
         font-weight: 700;
-        clip-path: ellipse(92% 126% at 5% 58%);
-        background-color: rgba(17, 24, 39, 1);
-        height:150px;
-        width:40%;
+        // text-align: center;
+        }
+        
+        p{
+          font-size: var(--font-sm);
+          font-weight: 600;
+        }
     }
 
     .text{
-      width:60%;
+      width:55%;
+      font-size: var(--font-sm);
+      font-weight: 700;
+      display:flex;
+      
+      .icon{
+        font-size:var(--font-md);
+        border: 2px solid var(--clr-primary-5);
+        color:var(--clr-primary-5);
+        border-radius:50%;
+      }
+    }
+
+    .next{
+      width:5%;
+      display:flex;
+      align-items: center;
+      justify-content:center;
+      font-size:1.5em;
+      user-select: none;
     }
       }
     }
@@ -210,9 +270,70 @@ export const StyledDashBoard = styled.div`
 
   .right-two {
     grid-area: right-2;
+    background-color:var(--clr-white);
+    padding: 15px;
+
+    header{
+      font-size: var(--font-md);
+      font-weight:700;
+    }
+
+    section{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+    article{
+      display: block;
+      
+
+      h4{
+        font-size: var(--font-sm);
+        font-weight : 700;
+      }
+
+      p{
+        font-size: var(--font-xs);
+        font-weight : 600;
+      }
+    }
   }
 
   .bottom {
     grid-area: bottom;
+    background-color:var(--clr-white);
+    padding: 1rem;
+
+    header{
+      color:var(--clr-primary-3);
+      font-size: var(--font-base);
+      font-weight:700;
+      margin-bottom:1em;
+    }
+
+  section{
+    display: flex;
+    flex-flow: row wrap;
+    gap : 1em;
+
+    &>*{
+      /* <flex-grow>  <flex-shrink> <flex-basis> */
+      flex: 1 1 30%;
+    }
+  }
+
+  .network{
+    h4{
+      color: var(--clr-primary-3);
+      font-size: var(--font-sm);
+      font-weight: 700;
+    }
+
+    p{
+      font-size: var(--font-xs);
+      font-weight: 600;
+    }
+  }
   }
 `;

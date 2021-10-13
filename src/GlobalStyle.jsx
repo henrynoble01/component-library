@@ -11,7 +11,8 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --font-xs: 13px;
     --font-sm: 14px;
-    --font-md: 18px;
+    --font-md: 20px;
+    --font-base: 2em;
     --font-lg: 32px;
     --container: 100%;
     --bg-nav: #000;
