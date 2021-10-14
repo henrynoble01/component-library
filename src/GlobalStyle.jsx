@@ -1,11 +1,23 @@
 import { createGlobalStyle } from "styled-components";
+// import CabinItalic from "./Assets/Font/Cabin/Cabin-Italic-VariableFont_wdth,wght.ttf";
+// import Cabin from "./Assets/Font/Cabin/Cabin-VariableFont_wdth,wght.ttf";
 
+// @font-face {
+//   font-family:'Cabin';
+//   src: local('Cabin'), local('cabin),
+//   url(${CabinItalic}) format('truetype'),
+//   url(${Cabin}) format('truetype');
+// }
 export const GlobalStyle = createGlobalStyle`
+
+
+
   * {
     font-size: var(--font-xs);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
   }
 
   :root {
@@ -17,7 +29,6 @@ export const GlobalStyle = createGlobalStyle`
     --font-lg: 32px;
     --container: 100%;
     --bg-nav: #000;
-
 
     /* dark shades of primary color*/
     --clr-primary-1: hsl(205, 86%, 17%);
@@ -44,9 +55,10 @@ export const GlobalStyle = createGlobalStyle`
     /*box-shadow */
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
 
-
-
+  h1, h2, h3, h4, h5,h6{
+    font-family: 'Cabin', sans-serif;
   }
 
   @media screen and (min-width: 640px) {

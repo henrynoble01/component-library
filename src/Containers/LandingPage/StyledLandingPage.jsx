@@ -52,8 +52,9 @@ export const StyledWelcomeBanner = styled.div`
 
   .text {
     & h3 {
-      font-size: var(--font-md);
-      font-weight: 700;
+      // font-size: var(--font-md);
+      font-size: 34px;
+      font-weight: 600;
     }
 
     span {
@@ -73,13 +74,36 @@ export const StyledDashBoard = styled.div`
     width: var(--container);
     margin: 0 auto;
     display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "left-1"
+      "left-2"
+      "right1"
+      "right2"
+      "bottom";
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: auto;
+    // grid-template-areas:
+    //   "left-1 left-1 left-1"
+    //   "left-2 left-2 right-2"
+    //   "bottom bottom bottom";
+    gap: 1.75rem;
+  }
+
+  @media screen and (min-width:800px){
+  .content {
+    // width: var(--container);
+    // margin: 0 auto;
+    // display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
       "left-1 left-1 right-1"
       "left-2 left-2 right-2"
       "bottom bottom bottom";
-    gap: 1.75rem;
+    // gap: 1.75rem;
+  }
   }
 
   .item{
@@ -87,87 +111,6 @@ export const StyledDashBoard = styled.div`
       border-radius: 10px;
   }
 
-  // .left-one {
-  //   grid-area: left-1;
-  //   position: relative;
-  //   overflow: hidden;
-  //   background-color: var(--clr-white);
-  //   padding:2em;
-  //   position: relative;
-    
-    
-  //   .content{
-  //     display: flex;
-  //     flex-flow: row wrap;
-  //     width: 100%;
-
-  //     & > * {
-  //       position: relative;
-  //       // z-index: 10;
-  //       // margin-bottom: 10px;
-  //       }
-
-  //     &::before {
-  //       position: absolute;
-  //       content: "";
-  //       height: 360px;
-  //       width: 360px;
-  //       border-radius: 50%;
-  //       background-color: rgba(17, 24, 39, 1);
-  //       top: -90px;
-  //       left: -49px;
-  //     }
-  //   }
-
-  //   & .circle {
-  //     // padding: 20px;
-  //     color: var(--clr-white);
-  //     width:40%;
-
-  //     // & > * {
-  //     //   position: relative;
-  //     //   z-index: 10;
-  //     //   margin-bottom: 10px;
-  //     // }
-
-  //     h3 {
-  //       font-size: var(--font-md);
-  //       font-weight: 700;
-  //     }
-
-  //     p {
-  //       font-size: var(--font-xs);
-  //       margin-bottom: 10px;
-  //     }
-
-  //     // &::before {
-  //     //   position: absolute;
-  //     //   content: "";
-  //     //   height: 360px;
-  //     //   width: 360px;
-  //     //   border-radius: 50%;
-  //     //   background-color: rgba(17, 24, 39, 1);
-  //     //   top: -90px;
-  //     //   left: -49px;
-  //     // }
-  //   }
-
-  //   .steps-list {
-  //     // padding: 10px 5px 5px 10px;
-  //     width:50%;
-
-  //     ul {
-  //       display: flex;
-  //       flex-direction: column;
-  //       row-gap: 7px;
-
-  //       li {
-  //         display: flex;
-  //         column-gap: 5px;
-  //       }
-  //     }
-  //   }
-  // }
 
   .left-one{
     grid-area: left-1;
