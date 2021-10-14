@@ -6,7 +6,6 @@ import {
   StyledWelcomeBanner,
   StyledDashBoard,
   StyledFooter,
-  StyledDashboarditems,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

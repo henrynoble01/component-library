@@ -194,6 +194,17 @@ export const StyledDashBoard = styled.div`
       height:100%;
       position: relative;
 
+      &::before{
+        position: absolute;
+        content: "";
+        height:400px;
+        width:400px;
+        border-radius: 50%;
+        background-color: rgba(17,24,39,1);
+        top: -50px;
+        left: -66px;
+        }
+
       .circle {
         padding: 10px;
         color: var(--clr-white);
@@ -223,26 +234,27 @@ export const StyledDashBoard = styled.div`
         }
       }
 
-        &::before{
-        position: absolute;
-        content: "";
-        height:400px;
-        width:400px;
-        border-radius: 50%;
-        background-color: rgba(17,24,39,1);
-        top: -50px;
-        left: -66px;
-        }
+        // &::before{
+        // position: absolute;
+        // content: "";
+        // height:400px;
+        // width:400px;
+        // border-radius: 50%;
+        // background-color: rgba(17,24,39,1);
+        // top: -50px;
+        // left: -66px;
+        // }
       }
 
         h3{
-        font-size: var(--font-md);
+        // font-size: var(--font-md);
         font-weight: 700;
-        // text-align: center;
+        font-size:32px;
         }
         
         p{
-          font-size: var(--font-sm);
+          // font-size: var(--font-sm);
+          font-size: 20px;
           font-weight: 600;
         }
     }
@@ -261,7 +273,8 @@ export const StyledDashBoard = styled.div`
 
       span{
         width:90%;
-        font-size: var(--font-xm) ;
+        // font-size: var(--font-xm) ;
+        font-size: 22px;
       }
     }
 
@@ -280,11 +293,14 @@ export const StyledDashBoard = styled.div`
   .right-two {
     grid-area: right-2;
     background-color:var(--clr-white);
-    padding: 5px 0 0 10px ;
+    padding: 5px 5px 10px 10px ;
+    
+    
 
     @media screen and (min-width: 800px) {
       &{
         flex: 1 1 35%;
+        padding: 5px 5px 5px 10px ;
       }
     }
 
@@ -333,10 +349,16 @@ export const StyledDashBoard = styled.div`
 
         &>*{
           /* <flex-grow>  <flex-shrink> <flex-basis> */
-          flex: 1 1 45%;
+          flex: 1 1 100%;
         }
         
-        @media screen and (min-width:1280){
+        @media screen and (min-width:800px){
+          &>*{
+            /* <flex-grow>  <flex-shrink> <flex-basis> */
+            flex: 1 1 45%;
+          }
+        }
+        @media screen and (min-width:1280px){
           &>*{
             /* <flex-grow>  <flex-shrink> <flex-basis> */
             flex: 1 1 30%;
