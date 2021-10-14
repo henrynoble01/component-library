@@ -6,12 +6,12 @@ import {
   StyledWelcomeBanner,
   StyledDashBoard,
   StyledFooter,
+  StyledDashboarditems,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheckCircle,
-  faChevronLeft,
   faChevronRight,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
@@ -77,6 +77,7 @@ const LandingPage = () => {
       </StyledWelcomeBanner>
       <StyledDashBoard>
         <div className='content'>
+          {/* <StyledDashboarditems> */}
           <div className='item  left-one bg-white p-6 overflow-hidden '>
             <div className='inner flex  '>
               <div className='circle w-2/5 text-white'>
@@ -108,7 +109,9 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+          {/* </StyledDashboarditems> */}
 
+          {/* <StyledDashboarditems> */}
           <div className='item right-one '>
             <header>
               Business Clinic
@@ -119,7 +122,9 @@ const LandingPage = () => {
               allowing you to concentrate on running your business.
             </p>
           </div>
+          {/* </StyledDashboarditems> */}
 
+          {/* <StyledDashboarditems> */}
           <div className='item left-two   '>
             <header className='header'>Blinkhub Benfits</header>
             <div className='benefits'>
@@ -131,6 +136,7 @@ const LandingPage = () => {
                     {blinkhubBenefits.map((element, i) => (
                       <>
                         <div
+                          key={i + element}
                           className={`position  ${
                             i <= index ? "bg-yellow-500" : "bg-red-900"
                           }`}></div>
@@ -148,30 +154,35 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+          {/* </StyledDashboarditems> */}
 
+          {/* <StyledDashboarditems> */}
           <div className='item right-two '>
             <header>Top {topBenfits.length} Benefits</header>
             <section>
-              {topBenfits.map((item) => (
-                <article>
+              {topBenfits.map((item, i) => (
+                <article key={i + item.title}>
                   <h4>{item.title}</h4>
                   <p>{item.text}</p>
                 </article>
               ))}
             </section>
           </div>
+          {/* </StyledDashboarditems> */}
 
+          {/* <StyledDashboarditems> */}
           <div className='item bottom '>
             <header>Network of Partners</header>
             <section>
-              {networkPartners.map((item) => (
-                <div className='network'>
+              {networkPartners.map((item, i) => (
+                <div key={i + item.title} className='network'>
                   <h4>{item.title}</h4>
                   <p>{item.text}</p>
                 </div>
               ))}
             </section>
           </div>
+          {/* </StyledDashboarditems> */}
         </div>
       </StyledDashBoard>
 

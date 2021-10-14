@@ -73,37 +73,23 @@ export const StyledDashBoard = styled.div`
   .content {
     width: var(--container);
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "left-1"
-      "left-2"
-      "right1"
-      "right2"
-      "bottom";
-    // grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-flow: row wrap;
+    // display: grid;
+    // grid-template-columns: 100%;
     // grid-template-rows: auto;
     // grid-template-areas:
-    //   "left-1 left-1 left-1"
-    //   "left-2 left-2 right-2"
-    //   "bottom bottom bottom";
+    //   "left-1"
+    //   "left-2"
+    //   "right1"
+    //   "right2"
+    //   "bottom";
     gap: 1.75rem;
   }
 
-  @media screen and (min-width:800px){
-  .content {
-    // width: var(--container);
-    // margin: 0 auto;
-    // display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      "left-1 left-1 right-1"
-      "left-2 left-2 right-2"
-      "bottom bottom bottom";
-    // gap: 1.75rem;
-  }
+  & > * {
+    flex: 1 1 100%;
+    // padding:20px;
   }
 
   .item{
@@ -115,31 +101,48 @@ export const StyledDashBoard = styled.div`
   .left-one{
     grid-area: left-1;
     position: relative;
+    background-color:#222b34;
+    color: var(--clr-white);
 
-    .inner{
-      &::before {
-    position: absolute;
-    content: "";
-    height: 360px;
-    width: 360px;
-    border-radius: 50%;
-    background-color: rgba(17, 24, 39, 1);
-    top: -90px;
-    left: -39px;
-  }
-
-  & > * {
-    position: relative;
-  }
+    @media screen and (min-width: 800px) {
+      &{
+        flex: 1 1 60%;
+      }
     }
-
-
+    
+    @media screen and (min-width: 1280px) {
+      background-color:var(--clr-white);
+      color:var(--clr-grey-1);
+      .inner{
+        &::before {
+      position: absolute;
+      content: "";
+      height: 360px;
+      width: 360px;
+      border-radius: 50%;
+      // background-color: #222b34;
+      background-color: rgba(17, 24, 39, 1);
+      top: -90px;
+      left: -39px;
+    }
+  
+        & > * {
+          position: relative;
+        }
+      }
+    }
   }
 
   .right-one {
     grid-area: right-1;
     padding: 0.75rem;
     background-color: var(--clr-white);
+
+    @media screen and (min-width: 800px) {
+      &{
+        flex: 1 1 35%;
+      }
+    }
 
     header {
       font-size: var(--font-md);
@@ -164,6 +167,12 @@ export const StyledDashBoard = styled.div`
     background-color: var(--clr-white);
     padding: 0 0 0 1em;
     box-shadow: var(--light-shadow);
+
+    @media screen and (min-width: 800px) {
+      &{
+        flex: 1 1 60%;
+      }
+    }
 
     .header {
       font-size: var(--font-md);
@@ -273,6 +282,12 @@ export const StyledDashBoard = styled.div`
     background-color:var(--clr-white);
     padding: 5px 0 0 10px ;
 
+    @media screen and (min-width: 800px) {
+      &{
+        flex: 1 1 35%;
+      }
+    }
+
     header{
       font-size: var(--font-md);
       font-weight:700;
@@ -318,7 +333,14 @@ export const StyledDashBoard = styled.div`
 
         &>*{
           /* <flex-grow>  <flex-shrink> <flex-basis> */
-          flex: 1 1 30%;
+          flex: 1 1 45%;
+        }
+        
+        @media screen and (min-width:1280){
+          &>*{
+            /* <flex-grow>  <flex-shrink> <flex-basis> */
+            flex: 1 1 30%;
+          }
         }
       }
 
@@ -334,6 +356,66 @@ export const StyledDashBoard = styled.div`
           font-weight: 600;
         }
   }
+  }
+`;
+
+export const StyledDashboarditems = styled.div`
+  // display: flex;
+  // gap: 1.75rem;
+  // flex-flow: column wrap;
+  background-color: var(--clr-white);
+  box-shadow: var(--dark-shadow);
+  border-radius: 10px;
+  // padding: 24px;
+  overflow: hidden;
+
+  .left-one {
+    // flex: 1 1 100%;
+    order: 0;
+  }
+  .left-two {
+    // flex: 1 1 100%;
+    order: 1;
+  }
+  .right-one {
+    // flex: 1 1 100%;
+    order: 1;
+  }
+  .right-two {
+    // flex: 1 1 100%;
+    order: 1;
+  }
+
+  bottom {
+    // flex: 1 1 100%;
+    order: 2;
+  }
+
+  @media screen and (min-width: 800px) {
+    // padding: 32px;
+
+    .left-one {
+      // flex: 1 1 60%;
+      width: 100%;
+      order: 10;
+    }
+    .left-two {
+      // flex: 1 1 60%;
+      order: 2;
+    }
+    .right-one {
+      // flex: 1 1 35%;
+      order: 3;
+    }
+    .right-two {
+      // flex: 1 1 35%;
+      order: 5;
+    }
+
+    bottom {
+      // flex: 1 1 100%;
+      order: 0;
+    }
   }
 `;
 

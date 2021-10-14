@@ -44,6 +44,12 @@ export const GlobalStyle = createGlobalStyle`
     --clr-primary-9: hsl(205, 90%, 88%);
     --clr-primary-10: hsl(205, 100%, 96%);
 
+      /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+
     --clr-grey-5: hsl(210, 22%, 49%);
     --clr-grey-6: hsl(209, 23%, 60%);
     --clr-grey-7: hsl(211, 27%, 70%);
