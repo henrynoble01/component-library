@@ -508,10 +508,12 @@ export const StyledFooter = styled.div`
   }
 
   .item {
-    // margin: 0.5em;
-    line-height: var(--line-height);
-    font-size: 1.125em;
-    font-weight: 400;
+    &,
+    & > * {
+      line-height: var(--line-height);
+      font-size: 1.125em;
+      font-weight: 400;
+    }
   }
 
   .bottom {

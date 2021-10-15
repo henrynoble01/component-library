@@ -3,7 +3,12 @@ import { ToggleProvider } from "./Context/ToggleContexts";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 // import Home from "./pages/Home";
 import { SideBar, NavBar } from "./components/index";
-import { EcoPrefenceWrapper, LoginPage, LandingPage } from "./Containers/index";
+import {
+  EcoPrefenceWrapper,
+  LoginPage,
+  LandingPage,
+  TermsOfUse,
+} from "./Containers/index";
 import { GlobalStyle } from "./GlobalStyle";
 
 export const AuthContext = createContext();
@@ -64,7 +69,7 @@ function App() {
               <>
                 {/* <NavBar />
                 <SideBar /> */}
-                <LandingPage />
+                {/* <LandingPage /> */}
               </>
             ) : (
               <LoginPage />
@@ -77,6 +82,8 @@ function App() {
               {/* <Route path='/' exact component={LoginPage} /> */}
               {/* <Route path='/login' exact component={LoginPage} /> */}
               <Route path='/EcoPrefrences' component={EcoPrefenceWrapper} />
+              <Route path='/terms-of-use' component={TermsOfUse} />
+              <Route path='/' exact component={LandingPage} />
             </Switch>
           </div>
         </ToggleProvider>

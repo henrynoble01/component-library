@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import "./LandingPage.css";
 import {
   StyledLayout,
@@ -219,7 +220,9 @@ const LandingPage = () => {
             <div className=''>
               <header>Legal</header>
               <div className='list'>
-                <div className='item'>Terms and Conditions</div>
+                <div className='item'>
+                  <Link to='/terms-of-use'>Terms and Conditions</Link>
+                </div>
                 <div className='item'>Cookie Policy</div>
               </div>
             </div>
