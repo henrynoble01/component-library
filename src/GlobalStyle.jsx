@@ -58,6 +58,8 @@ export const GlobalStyle = createGlobalStyle`
     --clr-grey-10: hsl(210, 36%, 96%);
     --clr-white: #fff;
 
+    --line-height:  1.75em ;
+
     /*box-shadow */
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);

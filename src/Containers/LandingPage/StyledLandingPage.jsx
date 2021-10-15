@@ -135,7 +135,7 @@ export const StyledDashBoard = styled.div`
 
   .right-one {
     grid-area: right-1;
-    padding: 0.75rem;
+    padding: 1.5em;
     background-color: var(--clr-white);
 
     @media screen and (min-width: 800px) {
@@ -156,8 +156,10 @@ export const StyledDashBoard = styled.div`
 
     p {
       padding: 0.5rem;
-      font-size: var(--font-sm);
-      font-weight: 600;
+      font-weight: 400;
+      padding-top: 11px;
+      font-size: 1.125em;
+      line-height:var(--line-height);
     }
   }
 
@@ -165,8 +167,8 @@ export const StyledDashBoard = styled.div`
     grid-area: left-2;
     overflow: hidden;
     background-color: var(--clr-white);
-    padding: 0 0 0 1em;
     box-shadow: var(--light-shadow);
+    position: relative;
 
     @media screen and (min-width: 800px) {
       &{
@@ -177,12 +179,14 @@ export const StyledDashBoard = styled.div`
     .header {
       font-size: var(--font-md);
       font-weight: 700;
-      padding: 0.75rem 0;
+      padding: 0.75em ;
     }
 
     .benefits {
       height: 19em;
+      height: 100%;
       overflow:hidden;
+
 
     }
     
@@ -206,7 +210,7 @@ export const StyledDashBoard = styled.div`
         }
 
       .circle {
-        padding: 10px;
+        padding: 3em 1.5em;
         color: var(--clr-white);
         // clip-path: ellipse(92% 84% at 7% 52%);
         height:100%;
@@ -214,15 +218,13 @@ export const StyledDashBoard = styled.div`
         display:flex;
         flex-flow: column wrap;
         justify-content:space-between;
-        padding:10px 0 20px 10px;
-
+        
         & > * {
         position: relative;
       }
 
       .slide-index{
         display: flex;
-        // justify-content: space-between;
         gap:10px;
         width: 90%;
 
@@ -230,20 +232,8 @@ export const StyledDashBoard = styled.div`
           height:0.75em;
           width:0.75em;
 
-          // .passed{}
         }
       }
-
-        // &::before{
-        // position: absolute;
-        // content: "";
-        // height:400px;
-        // width:400px;
-        // border-radius: 50%;
-        // background-color: rgba(17,24,39,1);
-        // top: -50px;
-        // left: -66px;
-        // }
       }
 
         h3{
@@ -266,6 +256,7 @@ export const StyledDashBoard = styled.div`
       display:flex;
       align-items: flex-start;
       gap:.875em;
+      padding-top: 20px;
       
       .icon{
         width:10%;
@@ -293,14 +284,16 @@ export const StyledDashBoard = styled.div`
   .right-two {
     grid-area: right-2;
     background-color:var(--clr-white);
-    padding: 5px 5px 10px 10px ;
+    // padding: 5px 5px 10px 10px ;
+    padding: 1.5em ;
     
     
 
     @media screen and (min-width: 800px) {
       &{
         flex: 1 1 35%;
-        padding: 5px 5px 5px 10px ;
+        // padding: 5px 5px 5px 10px ;
+        padding: 1.5em ;
       }
     }
 
@@ -321,11 +314,13 @@ export const StyledDashBoard = styled.div`
       h4{
         font-size: var(--font-xm);
         font-weight : 700;
+        margin-bottom: 2px;
       }
 
       p{
-        font-size: var(--font-xs);
-        font-weight : 600;
+        // font-size: var(--font-xs);
+        font-size: 1.125em;
+        font-weight : 400;
       }
     }
   }
@@ -333,7 +328,7 @@ export const StyledDashBoard = styled.div`
   .bottom {
     grid-area: bottom;
     background-color:var(--clr-white);
-    padding: 1rem;
+    padding: 1.1em;
 
       header{
         color:var(--clr-primary-3);
@@ -361,12 +356,15 @@ export const StyledDashBoard = styled.div`
         @media screen and (min-width:1280px){
           &>*{
             /* <flex-grow>  <flex-shrink> <flex-basis> */
-            flex: 1 1 30%;
+            flex: 1 1 25%;
+            
           }
         }
       }
 
       .network{
+        margin-right: 20px;
+        padding-right: 50px;
         h4{
           color: var(--clr-primary-3);
           font-size: var(--font-sm);
@@ -375,16 +373,17 @@ export const StyledDashBoard = styled.div`
 
         p{
           font-size: var(--font-xs);
-          font-weight: 600;
+          font-weight: 400;
+          font-size: 1.02em;
+          line-height: var(--line-height);
+          word-spacing: 0.12em;
+          letter-spacing: 0.01em;
         }
   }
   }
 `;
 
 export const StyledDashboarditems = styled.div`
-  // display: flex;
-  // gap: 1.75rem;
-  // flex-flow: column wrap;
   background-color: var(--clr-white);
   box-shadow: var(--dark-shadow);
   border-radius: 10px;
@@ -441,6 +440,35 @@ export const StyledDashboarditems = styled.div`
   }
 `;
 
+export const StyledAbout = styled.div`
+  width: 100%;
+  background-color: var(--clr-grey-10);
+  padding-bottom: 30px;
+
+  header {
+    color: var(--clr-primary-3);
+    font-size: var(--font-base);
+    font-weight: 700;
+  }
+
+  .content {
+    padding: 1.5em;
+    background-color: var(--clr-white);
+    width: var(--container);
+    margin: 0 auto;
+    box-shadow: var(--dark-shadow);
+    border-radius: 10px;
+  }
+
+  .caption {
+    margin-bottom: 2.5em;
+    line-height: 1.5em;
+    text-indent: 1.5em;
+    word-spacing: 0.12em;
+    letter-spacing: 0.01em;
+  }
+`;
+
 export const StyledFooter = styled.div`
   background-color: rgba(17, 24, 39, 1);
   color: var(--clr-white);
@@ -448,6 +476,7 @@ export const StyledFooter = styled.div`
 
   .top {
     display: flex;
+    width: 70%;
 
     & > * {
       flex: 1 1 30%;
@@ -461,16 +490,21 @@ export const StyledFooter = styled.div`
 
   header {
     font-size: 1.25em;
-    line-height: 1.75em;
+    line-height: var(--line-height);
+    margin-bottom: 10px;
   }
 
   .item {
-    margin: 0.5em;
+    // margin: 0.5em;
+    line-height: var(--line-height);
+    font-size: 1.125em;
+    font-weight: 400;
   }
 
   .bottom {
+    width: 90%;
     display: flex;
     justify-content: flex-end;
-    gap: 0.75em;
+    gap: 1.75em;
   }
 `;

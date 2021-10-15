@@ -6,6 +6,7 @@ import {
   StyledWelcomeBanner,
   StyledDashBoard,
   StyledFooter,
+  StyledAbout,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,17 +16,18 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  faFacebookSquare,
+  faLinkedin,
+  faTwitterSquare,
+} from "@fortawesome/free-brands-svg-icons";
+import {
   onboarding,
   navItems,
   blinkhubBenefits,
   topBenfits,
   networkPartners,
+  about,
 } from "./data";
-import {
-  faFacebookSquare,
-  faLinkedin,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons";
 
 const LandingPage = () => {
   const [index, setIndex] = useState(0);
@@ -125,7 +127,7 @@ const LandingPage = () => {
 
           {/* <StyledDashboarditems> */}
           <div className='item left-two   '>
-            <header className='header'>Blinkhub Benfits</header>
+            {/* <header className='header'>Blinkhub Benfits</header> */}
             <div className='benefits'>
               <div className='card'>
                 <div className='circle '>
@@ -184,6 +186,19 @@ const LandingPage = () => {
           {/* </StyledDashboarditems> */}
         </div>
       </StyledDashBoard>
+
+      <StyledAbout>
+        <div className='content'>
+          <header>Who we are and what we do</header>
+          {about.map((item) => (
+            <div
+              className='caption'
+              dangerouslySetInnerHTML={{ __html: item.caption }}
+            />
+            // <div key={item.id}>{dangerouslySetInnerHTML={{_html : item.caption}}} </div>
+          ))}
+        </div>
+      </StyledAbout>
 
       <StyledFooter>
         <div className='content'>

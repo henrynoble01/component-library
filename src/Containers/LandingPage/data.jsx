@@ -101,11 +101,6 @@ export const onboarding = [
 
 export const navItems = [
   {
-    id: 0,
-    text: "Logo",
-    link: "#",
-  },
-  {
     id: 1,
     text: "Home",
     link: "#",
@@ -183,5 +178,53 @@ export const networkPartners = [
   {
     title: "Press and PR",
     text: "A PR management service that gives you the platform to get your brand name in front of the people writing articles, commenting and interviewing  ",
+  },
+];
+
+export const about = [
+  {
+    id: 0,
+    caption:
+      "Blinkhub is a complete business support service platform owned by Business Ecosystems Linkages. Our membership is spread across Nigeria and primarily made up of companies that employ between 0-500 employees. We help you to manage your employees, save time and money and provide essential business support when you need it.",
+  },
+  {
+    id: 1,
+    caption:
+      "But all businesses are different, so each business needs a tailored approach based on the type of business you run and the risks you face. That is why we try to get to know you and your business using diagnostics tools so we can advise you accordingly and make ‘doing business’ easier, keeping you up to date through the ever-evolving maze of legislation and red tape issues, reducing your risks and giving you confidence and peace of mind.",
+  },
+  {
+    id: 2,
+    caption:
+      "Our priority is that you should not run into difficulties in the first place, meaning you do not have the financial cost as well as the cost of time, stress and worry involved in dealing with an issue. ",
+  },
+  {
+    id: 3,
+    caption:
+      "In 2020 Blinkhub decided to provide more proactive, preventative tools and services for our member businesses, and we deliver these in a practical way that is easy for you to implement. By doing things more proactively, we can make sure you are compliant, reduce your risks and give you more time to be able to focus on your business.",
+  },
+  {
+    id: 4,
+    caption:
+      "We have implemented a activity dashboard that will enable us to provide advice tailored to your business, so we can work proactively to make sure you are compliant and reduce the risk of any negative issues.",
+  },
+  {
+    id: 5,
+    caption:
+      "You have access to both our <b>general and legal business helplines</b> and a <b>24-hours crisis line </b>if the worst does happen. During office hours you can talk to a friendly advisor who can help you find answers and solutions to your business questions.",
+  },
+  {
+    id: 6,
+    caption:
+      "This support service gives our members peace of mind which is important when you are running a business. Business owners do not have the time to know everything which is why Blinkhub members have a big advantage over other businesses.",
+  },
+  {
+    id: 7,
+    caption:
+      "We believe businesses that seek advice are more likely to become successful. With Blinkhub Membership, your business will have access to a team of experienced advisors and a partner network that will be able to share their knowledge and services at a discounted rate. You will also have access to a toolbox of resources including comprehensive business guides and templates for you to edit and use within your business.",
+  },
+  {
+    id: 8,
+    caption:
+      "Everything we do is about making sure our members’ businesses operate <b>better</b> and  we are very passionate about providing the support and resources that will enable a business to flourish and grow.",
   },
 ];
