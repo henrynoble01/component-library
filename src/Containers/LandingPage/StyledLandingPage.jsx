@@ -466,6 +466,8 @@ export const StyledAbout = styled.div`
     text-indent: 1.5em;
     word-spacing: 0.12em;
     letter-spacing: 0.01em;
+    font-size: 1.02em;
+    color: var(--clr-grey-4);
   }
 `;
 
@@ -477,9 +479,14 @@ export const StyledFooter = styled.div`
   .top {
     display: flex;
     width: 70%;
+    flex-flow: column wrap;
+    row-gap: 2.1em;
 
-    & > * {
-      flex: 1 1 30%;
+    @media screen and (min-width: 800px) {
+      flex-flow: row wrap;
+      & > * {
+        flex: 1 1 30%;
+      }
     }
   }
 
@@ -491,7 +498,13 @@ export const StyledFooter = styled.div`
   header {
     font-size: 1.25em;
     line-height: var(--line-height);
-    margin-bottom: 10px;
+    font-weight: 700;
+
+    @media screen and (min-width: 800px) {
+      & {
+        margin-bottom: 10px;
+      }
+    }
   }
 
   .item {
