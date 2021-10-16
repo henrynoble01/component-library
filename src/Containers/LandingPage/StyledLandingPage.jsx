@@ -25,7 +25,8 @@ export const StyledNavigation = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: var(--container);
+    max-width: var(--container);
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -43,7 +44,8 @@ export const StyledWelcomeBanner = styled.div`
   width: 100%;
 
   .content {
-    width: var(--container);
+    max-width: var(--container);
+    width: 90%;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -71,7 +73,8 @@ export const StyledDashBoard = styled.div`
   padding-bottom:30px;
 
   .content {
-    width: var(--container);
+    width: 90%;
+    max-width: var(--container);
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -113,6 +116,7 @@ export const StyledDashBoard = styled.div`
     @media screen and (min-width: 1280px) {
       background-color:var(--clr-white);
       color:var(--clr-grey-1);
+
       .inner{
         &::before {
       position: absolute;
@@ -120,10 +124,9 @@ export const StyledDashBoard = styled.div`
       height: 360px;
       width: 360px;
       border-radius: 50%;
-      // background-color: #222b34;
       background-color: rgba(17, 24, 39, 1);
       top: -90px;
-      left: -39px;
+      left: -60px;
     }
   
         & > * {
@@ -201,13 +204,17 @@ export const StyledDashBoard = styled.div`
       &::before{
         position: absolute;
         content: "";
-        height:400px;
-        width:400px;
+        height: 450px;
+        width: 450px;
         border-radius: 50%;
         background-color: rgba(17,24,39,1);
-        top: -50px;
-        left: -66px;
-        }
+        top: -49px;
+        left: -130px;
+      }
+
+      & > * {
+      position: relative;
+    }
 
       .circle {
         padding: 3em 1.5em;
@@ -219,9 +226,6 @@ export const StyledDashBoard = styled.div`
         flex-flow: column wrap;
         justify-content:space-between;
         
-        & > * {
-        position: relative;
-      }
 
       .slide-index{
         display: flex;
@@ -445,23 +449,24 @@ export const StyledAbout = styled.div`
   background-color: var(--clr-grey-10);
   padding-bottom: 30px;
 
+  .content {
+    padding: 1.5em;
+    background-color: var(--clr-white);
+    max-width: var(--container);
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: var(--dark-shadow);
+    border-radius: 10px;
+  }
+
   header {
     color: var(--clr-primary-3);
     font-size: var(--font-base);
     font-weight: 700;
   }
 
-  .content {
-    padding: 1.5em;
-    background-color: var(--clr-white);
-    width: var(--container);
-    margin: 0 auto;
-    box-shadow: var(--dark-shadow);
-    border-radius: 10px;
-  }
-
   .caption {
-    margin-bottom: 2.5em;
+    margin-bottom: 0.8em;
     line-height: 1.5em;
     text-indent: 1.5em;
     word-spacing: 0.12em;
@@ -476,6 +481,12 @@ export const StyledFooter = styled.div`
   color: var(--clr-white);
   padding: 3em;
 
+  .content {
+    width: 90%;
+    max-width: var(--container);
+    margin: 0 auto;
+  }
+
   .top {
     display: flex;
     width: 70%;
@@ -488,11 +499,6 @@ export const StyledFooter = styled.div`
         flex: 1 1 30%;
       }
     }
-  }
-
-  .content {
-    width: var(--container);
-    margin: 0 auto;
   }
 
   header {
@@ -517,7 +523,7 @@ export const StyledFooter = styled.div`
   }
 
   .bottom {
-    width: 90%;
+    // width: 90%;
     display: flex;
     justify-content: flex-end;
     gap: 1.75em;
