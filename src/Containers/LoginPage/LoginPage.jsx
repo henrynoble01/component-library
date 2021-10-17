@@ -6,24 +6,27 @@ import {
   faTwitterSquare,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import "./LoginPage.module.css";
+import { StyledLoginPage } from "./StyledLoginPage";
+// import "./LoginPage.module.css";
 
 import { AuthContext } from "../../App";
 
 const LoginPage = () => {
   const { dispatch } = useContext(AuthContext);
   return (
-    <div className='content'>
-      <Header as='h1' color='teal'>
-        Cad Consulting Limited
-      </Header>
-      <LoginArea dispatch={dispatch} />
-      <Header size='tiny' color='teal' className='footer'>
-        2017 - {new Date().getFullYear()}
-        <span dangerouslySetInnerHTML={{ __html: " &copy " }} />
-        Eletronic co-operative savings services 3.0
-      </Header>
-    </div>
+    <StyledLoginPage>
+      <div className='content'>
+        <Header as='h1' color='teal'>
+          Cad Consulting Limited
+        </Header>
+        <LoginArea dispatch={dispatch} />
+        <Header size='tiny' color='teal' className='footer'>
+          2017 - {new Date().getFullYear()}
+          <span dangerouslySetInnerHTML={{ __html: " &copy " }} />
+          Eletronic co-operative savings services 3.0
+        </Header>
+      </div>
+    </StyledLoginPage>
   );
 };
 

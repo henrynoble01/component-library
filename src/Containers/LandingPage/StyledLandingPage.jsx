@@ -169,13 +169,19 @@ export const StyledDashBoard = styled.div`
   .left-two {
     grid-area: left-2;
     overflow: hidden;
-    background-color: var(--clr-white);
     box-shadow: var(--light-shadow);
     position: relative;
+    background-color:#222b34;
+    color: var(--clr-white);
 
     @media screen and (min-width: 800px) {
       &{
         flex: 1 1 60%;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      &{
+        background-color: var(--clr-white);
       }
     }
 
@@ -197,19 +203,20 @@ export const StyledDashBoard = styled.div`
       display: flex;
       box-shadow: var(--light-shadow);
       gap: 0.75rem;
-      background-color:var(--clr-white);
       height:100%;
       position: relative;
 
-      &::before{
-        position: absolute;
-        content: "";
-        height: 450px;
-        width: 450px;
-        border-radius: 50%;
-        background-color: rgba(17,24,39,1);
-        top: -49px;
-        left: -130px;
+      @media screen and (min-width: 1280px){
+        &::before{
+          position: absolute;
+          content: "";
+          height: 450px;
+          width: 450px;
+          border-radius: 50%;
+          background-color: rgba(17,24,39,1);
+          top: -49px;
+          left: -130px;
+          }
       }
 
       & > * {
@@ -219,7 +226,6 @@ export const StyledDashBoard = styled.div`
       .circle {
         padding: 3em 1.5em;
         color: var(--clr-white);
-        // clip-path: ellipse(92% 84% at 7% 52%);
         height:100%;
         width:40%;
         display:flex;
@@ -229,25 +235,25 @@ export const StyledDashBoard = styled.div`
 
       .slide-index{
         display: flex;
-        gap:10px;
+        gap:3px;
         width: 90%;
+        @media screen and (min-width:1280px){
+            gap:10px;
+        }
 
         .position{
           height:0.75em;
           width:0.75em;
-
         }
       }
       }
 
         h3{
-        // font-size: var(--font-md);
         font-weight: 700;
         font-size:32px;
         }
         
         p{
-          // font-size: var(--font-sm);
           font-size: 20px;
           font-weight: 600;
         }
@@ -261,6 +267,12 @@ export const StyledDashBoard = styled.div`
       align-items: flex-start;
       gap:.875em;
       padding-top: 20px;
+
+      @media screen and (min-width:1280px){
+        &{
+          color: var(--clr-grey-6)
+        }
+      }
       
       .icon{
         width:10%;
@@ -268,8 +280,8 @@ export const StyledDashBoard = styled.div`
 
       span{
         width:90%;
-        // font-size: var(--font-xm) ;
         font-size: 22px;
+
       }
     }
 
@@ -280,6 +292,12 @@ export const StyledDashBoard = styled.div`
       justify-content:center;
       font-size:1.5em;
       user-select: none;
+
+      @media screen and (min-width:1280px){
+        &{
+          color: var(--clr-grey-4);
+        }
+      }
     }
       }
     }
@@ -323,7 +341,7 @@ export const StyledDashBoard = styled.div`
 
       p{
         // font-size: var(--font-xs);
-        font-size: 1.125em;
+        font-size: 1em;
         font-weight : 400;
       }
     }

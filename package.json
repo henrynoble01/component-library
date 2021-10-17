@@ -23,8 +23,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy":"yarn run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "start": "craco start",
     "build": "craco build",
@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9",
+    "babel-plugin-styled-components": "^1.13.2",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }

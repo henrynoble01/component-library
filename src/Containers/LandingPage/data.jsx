@@ -233,8 +233,9 @@ export const termsOfUse = [
   {
     id: 1,
     title: "ACCEPTANCE OF TERMS",
-    caption:
+    caption: [
       'This Terms of Use ("TOU") applies to your use of the OutSystems’ services, including the access to a variety of resources such as developer tools, download areas, communication forums and product information through OutSystems’ network of Web properties (including any updates, enhancements, new features, and/or the addition of any new Web properties) and other content that OutSystems makes available from time to time (the "Services"). OutSystems reserves the right to change these Terms from time to time without notice in its sole and absolute discretion. The most current version of the TOU can be reviewed by clicking on the "Terms of Use" hypertext link located at the bottom of our Web pages. By accessing and using our Services, you are agreeing to these TOU. "OutSystems" means OutSystems- Software em Rede, S.A., whose registered head office is at Rua Central Park, Ed. 6, 2.ºA, 2795-242 Linda-a-Velha, Portugal.',
+    ],
   },
   {
     id: 2,
@@ -248,14 +249,16 @@ export const termsOfUse = [
   {
     id: 3,
     title: "PERSONAL AND NON-COMMERCIAL USE LIMITATION",
-    caption:
+    caption: [
       "Unless otherwise specified, the Services are for your personal and non-commercial use. You may not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, rent or sell any information, software, products or services obtained from the Services.",
+    ],
   },
   {
     id: 4,
     title: "PRIVACY AND PROTECTION OF PERSONAL INFORMATION",
-    caption:
+    caption: [
       "See the Privacy Statement disclosures relating to the collection and use of your information, and OutSystems position towards GDPR.",
+    ],
   },
   {
     id: 5,
@@ -280,20 +283,23 @@ export const termsOfUse = [
     id: 7,
     title:
       "NOTICES REGARDING SOFTWARE, DOCUMENTS AND SERVICES AVAILABLE ON THIS WEB SITE",
-    caption:
+    caption: [
       "IN NO EVENT SHALL OutSystems BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF SOFTWARE, DOCUMENTS, PROVISION OF OR FAILURE TO PROVIDE SERVICES, OR INFORMATION AVAILABLE FROM THE SERVICES.",
+    ],
   },
   {
     id: 8,
     title: "MEMBER ACCOUNT, PASSWORD, AND SECURITY",
-    caption:
+    caption: [
       "If any of the Services requires you to open an account, you must complete the registration process by providing us with current, complete and accurate information as prompted by the applicable registration form. Password will be provided by the Services and must be changed by you. You are entirely responsible for maintaining the confidentiality of your password and account. Furthermore, you are entirely responsible for any and all activities that occur under your account. You agree to notify OutSystems immediately of any unauthorized use of your account or any other breach of security. OutSystems will not be liable for any loss that you may incur as a result of someone else using your password or account, either with or without your knowledge. However, you could be held liable for losses incurred by OutSystems or another party due to someone else using your account or password. You may not use anyone else's account at any time, without the permission of the account holder.",
+    ],
   },
   {
     id: 9,
     title: "NO UNLAWFUL OR PROHIBITED USE",
-    caption:
+    caption: [
       "As a condition of your use of the Services, you will not use the Services for any purpose that is unlawful or prohibited by these terms, conditions, and notices. You may not use the Services in any manner that could damage, disable, overburden, or impair any OutSystems server, or the network(s) connected to any OutSystems server, or interfere with any other party's use and enjoyment of any Services. You may not attempt to gain unauthorized access to any Services, other accounts, computer systems or networks connected to any OutSystems server or to any of the Services, through hacking, password mining or any other means. You may not obtain or attempt to obtain any materials or information through any means not intentionally made available through the Services. The TOU, and your relationship with OutSystems, is governed by the laws of Portugal. You and OutSystems agree to submit any legal matter arising from the TOU to the exclusive jurisdiction of the courts of Lisbon, Portugal. Notwithstanding this, you agree that OutSystems shall still be allowed to apply for injunctive remedies in any jurisdiction.",
+    ],
   },
   {
     id: 10,
@@ -335,20 +341,23 @@ export const termsOfUse = [
   {
     id: 12,
     title: "SOFTWARE AND CONTENT AVAILABLE ON THE OUTSYSTEMS WEB SITE",
-    caption:
+    caption: [
       'Software (if any), specific materials, information, products or services, materials and content that are made available to download from the OutSystems Web Site, excluding software that may be made available by end-users through a Communication Service, (collectively, “Content”) is the copyrighted work of OutSystems and/or its suppliers. Your use of the Content is governed by the terms of the end user license agreement, if any, which accompanies or is included with the Content ("License Agreement"). You may not install or use any Content that is accompanied by or includes a License Agreement unless you first agree to the License Agreement terms. Content is owned by OutSystems and/or its suppliers and is protected by copyright laws and international treaty provisions. Any reproduction outside the scope of the License Agreement or redistribution of the Content is expressly prohibited by law and by this ToU.',
+    ],
   },
   {
     id: 13,
     title: "LINKS TO THIRD PARTY SITES",
-    caption:
+    caption: [
       "THE LINKS IN THIS AREA WILL LET YOU LEAVE OutSystems SITE. THE LINKED SITES ARE NOT UNDER THE CONTROL OF OutSystems AND OutSystems IS NOT RESPONSIBLE FOR THE CONTENTS OF ANY LINKED SITE OR ANY LINK CONTAINED IN A LINKED SITE, OR ANY CHANGES OR UPDATES TO SUCH SITES. OutSystems IS NOT RESPONSIBLE FOR WEBCASTING OR ANY OTHER FORM OF TRANSMISSION RECEIVED FROM ANY LINKED SITE. Outsystems IS PROVIDING THESE LINKS TO YOU ONLY AS A CONVENIENCE, AND THE INCLUSION OF ANY LINK DOES NOT IMPLY ENDORSEMENT BY OutSystems OF THE SITE.",
+    ],
   },
   {
     id: 14,
     title: "UNSOLICITED IDEA SUBMISSION POLICY",
-    caption:
+    caption: [
       "OutSystems OR ANY OF ITS EMPLOYEES DO NOT ACCEPT OR CONSIDER UNSOLICITED IDEAS, INCLUDING IDEAS FOR NEW ADVERTISING CAMPAIGNS, NEW PROMOTIONS, NEW PRODUCTS OR TECHNOLOGIES, PROCESSES, MATERIALS, MARKETING PLANS OR NEW PRODUCT NAMES. PLEASE DO NOT SEND ANY ORIGINAL CREATIVE ARTWORK, SAMPLES, DEMOS, OR OTHER WORKS. THE SOLE PURPOSE OF THIS POLICY IS TO AVOID POTENTIAL MISUNDERSTANDINGS OR DISPUTES WHEN OutSystems PRODUCTS OR MARKETING STRATEGIES MIGHT SEEM SIMILAR TO IDEAS SUBMITTED TO OutSystems. SO, PLEASE DO NOT SEND YOUR UNSOLICITED IDEAS TO OutSystems OR ANYONE AT Outsystems. IF, DESPITE OUR REQUEST THAT YOU NOT SEND US YOUR IDEAS AND MATERIALS, YOU STILL SEND THEM, PLEASE UNDERSTAND THAT OutSystems MAKES NO ASSURANCES THAT YOUR IDEAS AND MATERIALS WILL BE TREATED AS CONFIDENTIAL OR PROPRIETARY.",
+    ],
   },
   {
     id: 15,
