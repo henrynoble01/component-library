@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// import "./LandingPage.css";
+// import { Link } from "react-router-dom";
+import Footer from "./Footer/Footer";
+import Navigation from "./Navigation/Navigation";
 import {
   StyledLayout,
-  StyledNavigation,
   StyledWelcomeBanner,
   StyledDashBoard,
-  StyledFooter,
   StyledAbout,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
@@ -17,13 +16,7 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebookSquare,
-  faLinkedin,
-  faTwitterSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import {
   onboarding,
-  navItems,
   blinkhubBenefits,
   topBenfits,
   networkPartners,
@@ -50,21 +43,8 @@ const LandingPage = () => {
 
   return (
     <StyledLayout>
-      <StyledNavigation>
-        <div className='content'>
-          <ul className='nav-left'>
-            {navItems.map((items) => (
-              <li className='nav-item' key={items.id}>
-                {items.text}
-              </li>
-            ))}
-          </ul>
-          <div className='nav-right'>
-            <div className='sign-up'>Sign Up</div>
-            <div className='sign-up'>Login</div>
-          </div>
-        </div>
-      </StyledNavigation>
+      {/* this is the navigation("navbar") component */}
+      <Navigation />
 
       <StyledWelcomeBanner>
         <div className='content'>
@@ -200,40 +180,8 @@ const LandingPage = () => {
           ))}
         </div>
       </StyledAbout>
-
-      <StyledFooter>
-        <div className='content'>
-          <div className='top '>
-            <div className='logo img-container'>
-              <img src={Images.BlinkHubLogo} alt='BlinkHub Logo' />
-            </div>
-            <div className=''>
-              <header className='text-xl '>Business Ecosystem Linkages</header>
-              <div className='list  text-base   '>
-                <div className='item '>#30 trans woji road 2nd floor</div>
-                <div className='item '>Port Harcourt</div>
-                <div className='item '>Rivers State</div>
-                <div className='item '>Tel: +234 08033131904</div>
-              </div>
-            </div>
-
-            <div className=''>
-              <header>Legal</header>
-              <div className='list'>
-                <div className='item'>
-                  <Link to='/terms-of-use'>Terms and Conditions</Link>
-                </div>
-                <div className='item'>Cookie Policy</div>
-              </div>
-            </div>
-          </div>
-          <div className='bottom'>
-            <FontAwesomeIcon className='text-3xl' icon={faTwitterSquare} />
-            <FontAwesomeIcon className='text-3xl' icon={faFacebookSquare} />
-            <FontAwesomeIcon className='text-3xl' icon={faLinkedin} />
-          </div>
-        </div>
-      </StyledFooter>
+      {/* this is the footer component thinking about making it into a jspn structure */}
+      <Footer />
     </StyledLayout>
   );
 };

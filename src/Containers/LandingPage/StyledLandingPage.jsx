@@ -270,7 +270,7 @@ export const StyledDashBoard = styled.div`
 
       @media screen and (min-width:1280px){
         &{
-          color: var(--clr-grey-6)
+          color: var(--clr-grey-3)
         }
       }
       
@@ -306,7 +306,6 @@ export const StyledDashBoard = styled.div`
   .right-two {
     grid-area: right-2;
     background-color:var(--clr-white);
-    // padding: 5px 5px 10px 10px ;
     padding: 1.5em ;
     
     
@@ -314,7 +313,6 @@ export const StyledDashBoard = styled.div`
     @media screen and (min-width: 800px) {
       &{
         flex: 1 1 35%;
-        // padding: 5px 5px 5px 10px ;
         padding: 1.5em ;
       }
     }
@@ -331,18 +329,20 @@ export const StyledDashBoard = styled.div`
       row-gap : 1em;
       height: 100%;
     }
+
     article{
       
       h4{
         font-size: var(--font-xm);
         font-weight : 700;
         margin-bottom: 2px;
+        color: var(--clr-grey-2)
       }
 
       p{
-        // font-size: var(--font-xs);
         font-size: 1em;
         font-weight : 400;
+        color: var(--clr-grey-3);
       }
     }
   }
@@ -456,7 +456,6 @@ export const StyledDashboarditems = styled.div`
     }
 
     bottom {
-      // flex: 1 1 100%;
       order: 0;
     }
   }
@@ -486,64 +485,9 @@ export const StyledAbout = styled.div`
   .caption {
     margin-bottom: 0.8em;
     line-height: 1.5em;
-    text-indent: 1.5em;
     word-spacing: 0.12em;
     letter-spacing: 0.01em;
     font-size: 1.02em;
     color: var(--clr-grey-4);
-  }
-`;
-
-export const StyledFooter = styled.div`
-  background-color: rgba(17, 24, 39, 1);
-  color: var(--clr-white);
-  padding: 3em;
-
-  .content {
-    width: 90%;
-    max-width: var(--container);
-    margin: 0 auto;
-  }
-
-  .top {
-    display: flex;
-    width: 70%;
-    flex-flow: column wrap;
-    row-gap: 2.1em;
-
-    @media screen and (min-width: 800px) {
-      flex-flow: row wrap;
-      & > * {
-        flex: 1 1 30%;
-      }
-    }
-  }
-
-  header {
-    font-size: 1.25em;
-    line-height: var(--line-height);
-    font-weight: 700;
-
-    @media screen and (min-width: 800px) {
-      & {
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  .item {
-    &,
-    & > * {
-      line-height: var(--line-height);
-      font-size: 1.125em;
-      font-weight: 400;
-    }
-  }
-
-  .bottom {
-    // width: 90%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1.75em;
   }
 `;

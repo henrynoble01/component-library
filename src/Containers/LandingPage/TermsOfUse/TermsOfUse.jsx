@@ -1,10 +1,14 @@
 import React from "react";
-import { termsOfUse } from "../LandingPage/data";
+import { termsOfUse } from "../data";
 import { StyledTermsOfUse } from "./StyledTermsOfUse";
+import Footer from "../Footer/Footer";
+import Navigation from "../Navigation/Navigation";
 
 const TermsOfUse = () => {
   return (
     <StyledTermsOfUse>
+      {/* this is the navigation("navbar component") */}
+      <Navigation />
       <div className='content'>
         <div className='info'>
           <h2>OutSystems - Website Terms of Use</h2>
@@ -48,6 +52,7 @@ const TermsOfUse = () => {
           ))}
         </section>
       </div>
+      <Footer />
     </StyledTermsOfUse>
   );
 };
