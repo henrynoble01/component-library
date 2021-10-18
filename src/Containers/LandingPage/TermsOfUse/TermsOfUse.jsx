@@ -3,6 +3,7 @@ import { termsOfUse } from "../data";
 import { StyledTermsOfUse } from "./StyledTermsOfUse";
 import Footer from "../Footer/Footer";
 import Navigation from "../Navigation/Navigation";
+import { HashLink } from "react-router-hash-link";
 
 const TermsOfUse = () => {
   return (
@@ -29,9 +30,11 @@ const TermsOfUse = () => {
         <div className='index'>
           {/* get the titles from the array only  to use to hash links*/}
           {termsOfUse.map((item) => (
-            <p className='text-md link' key={item.id}>
-              {item.id} - {item.title}
-            </p>
+            <HashLink smooth to={`/terms-of-use/#${item.id}`}>
+              <p className='text-md link' key={item.id}>
+                {item.id} - {item.title}
+              </p>
+            </HashLink>
           ))}
         </div>
         <section className='terms'>
