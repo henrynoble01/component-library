@@ -15,6 +15,6 @@ jobs:
       - run: npm install -g surge
       - run: npm install -g yarn
       - run: rm -rf node_modules && yarn install --frozen-lockfile
-      - run: yarn run build
+      - run: CI=false yarn run build
       - run: cd build
       - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN}}
