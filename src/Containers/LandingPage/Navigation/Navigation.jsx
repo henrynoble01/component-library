@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { StyledNavigation } from "./StyledSubNav";
 import { navItems } from "../data";
 
@@ -10,7 +11,7 @@ const Navigation = () => {
           <ul className='nav-left'>
             {navItems.map((items) => (
               <li className='nav-item' key={items.id}>
-                {items.text}
+                <Link to={`${items.link}`}>{items.text}</Link>
               </li>
             ))}
           </ul>

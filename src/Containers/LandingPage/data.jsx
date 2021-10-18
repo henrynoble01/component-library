@@ -103,22 +103,22 @@ export const navItems = [
   {
     id: 1,
     text: "Home",
-    link: "#",
+    link: "/",
   },
   {
     id: 2,
     text: "About",
-    link: "#",
+    link: "/#about",
   },
   {
     id: 3,
     text: "Partners",
-    link: "#",
+    link: "/#partners",
   },
   {
     id: 4,
     text: "Benefits",
-    link: "#",
+    link: "/#benefits",
   },
   {
     id: 5,
