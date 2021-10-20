@@ -35,6 +35,7 @@ export const StyledTermsOfUse = styled.div`
     cursor: pointer;
     transition: all 200ms ease;
     width: max-content;
+    display: inline-block;
 
     &:hover {
       text-decoration: underline;
