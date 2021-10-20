@@ -27,7 +27,7 @@ export const StyledTermsOfUse = styled.div`
     line-height: 1.55;
     margin: 0 0 1rem 0;
     padding: 0;
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
   .link {
@@ -35,7 +35,6 @@ export const StyledTermsOfUse = styled.div`
     cursor: pointer;
     transition: all 200ms ease;
     width: max-content;
-    display: inline-block;
 
     &:hover {
       text-decoration: underline;

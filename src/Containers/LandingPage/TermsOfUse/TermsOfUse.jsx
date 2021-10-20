@@ -30,11 +30,14 @@ const TermsOfUse = () => {
         <div className='index'>
           {/* get the titles from the array only  to use to hash links*/}
           {termsOfUse.map((item) => (
-            <HashLink smooth to={`/terms-of-use/#${item.id}`}>
-              <p className='text-md link' key={item.id}>
+            <p className='text-md ' key={item.id}>
+              <HashLink
+                smooth
+                to={`/terms-of-use/#${item.id}`}
+                className='text-md link'>
                 {item.id} - {item.title}
-              </p>
-            </HashLink>
+              </HashLink>
+            </p>
           ))}
         </div>
         <section className='terms'>
