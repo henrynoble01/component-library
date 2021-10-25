@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledTermsOfUse = styled.div`
-  padding: 0 20px;
+  // padding: 0 20px;
   width: 100%;
 
   .content {

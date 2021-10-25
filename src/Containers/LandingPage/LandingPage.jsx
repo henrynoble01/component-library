@@ -9,12 +9,12 @@ import {
   StyledAbout,
 } from "./StyledLandingPage";
 import { Images } from "../../Assets/Assets";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCheckCircle,
-  faChevronRight,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faCheckCircle,
+//   faChevronRight,
+//   faInfoCircle,
+// } from "@fortawesome/free-solid-svg-icons";
 import {
   onboarding,
   blinkhubBenefits,
@@ -22,6 +22,15 @@ import {
   networkPartners,
   about,
 } from "./data";
+import {
+  Segment,
+  Container,
+  Grid,
+  Image,
+  Header,
+  Divider,
+  Icon,
+} from "semantic-ui-react";
 
 const LandingPage = () => {
   const [index, setIndex] = useState(0);
@@ -42,147 +51,200 @@ const LandingPage = () => {
   };
 
   return (
-    <StyledLayout>
+    <>
       {/* this is the navigation("navbar") component */}
       <Navigation />
+      {/* i think this is going to be the semantic-ui banner comonent  */}
+      <WelcomeBanner />
+      {/* this is the semantic ui dashboard */}
+      <Dashboard
+        title={title}
+        text={text}
+        images={images}
+        index={index}
+        next={next}
+      />
+      {/* this is the semantic about section */}
+      <About />
 
-      <StyledWelcomeBanner>
-        <div className='content'>
-          <div className='img-container'>
-            <img src={Images.BlinkHubLogo} alt='BlinkHubLogo' />
-          </div>
-          <div className='text'>
-            <h3>Welcome</h3>
-            <span>To the world of business support</span>
-          </div>
-        </div>
-      </StyledWelcomeBanner>
-      <StyledDashBoard>
-        <div className='content'>
-          {/* <StyledDashboarditems> */}
-          <div className='item  left-one bg-white p-6 overflow-hidden '>
-            <div className='inner flex  '>
-              <div className='circle w-2/5 text-white'>
-                <h3 className='text-2xl  font-bold mb-3'>Onboarding</h3>
-                <p className=' text-lg w-11/12 font-semibold mb-3'>
-                  Complete These Steps to start working with blinkhub
-                </p>
-                <p className='text-lg font-normal'>2 Completed / 3</p>
-                {/* <div className='steps stepper'>
-                <div className='line completed'></div>
-                <div className='line completed'></div>
-                <div className='line '></div>
-              </div> */}
-              </div>
-              <div className='steps-list w-3/5  flex items-center  pl-5 '>
-                <ul className='flex gap-y-3 flex-col  '>
-                  {onboarding.map((item, index) => (
-                    <li
-                      key={index + item.text}
-                      className='flex gap-x-3  items-start '>
-                      <FontAwesomeIcon
-                        icon={faCheckCircle}
-                        className='text-xl text-yellow-300'
-                      />
-                      <span className='text-lg'>{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* </StyledDashboarditems> */}
-
-          {/* <StyledDashboarditems> */}
-          <div className='item right-one '>
-            <header>
-              Business Clinic
-              <FontAwesomeIcon className='icon' icon={faInfoCircle} />
-            </header>
-            <p>
-              Our business advice and support will save you time and money,
-              allowing you to concentrate on running your business.
-            </p>
-          </div>
-          {/* </StyledDashboarditems> */}
-
-          {/* <StyledDashboarditems> */}
-          <div className='item left-two   '>
-            {/* <header className='header'>Blinkhub Benfits</header> */}
-            <div className='benefits'>
-              <div className='card'>
-                <div className='circle '>
-                  <h3>Top {blinkhubBenefits.length} Benefits of BlinkHub</h3>
-                  <p>{title}</p>
-                  <div className='slide-index '>
-                    {blinkhubBenefits.map((element, i) => (
-                      <>
-                        <div
-                          key={i + element}
-                          className={`position  ${
-                            i <= index ? "bg-yellow-500" : "bg-red-900"
-                          }`}></div>
-                      </>
-                    ))}
-                  </div>
-                </div>
-                <div className='text'>
-                  <img src={images} alt={title} className='icon' />
-                  <span>{text}</span>
-                </div>
-                <div onClick={next} className='next'>
-                  <FontAwesomeIcon icon={faChevronRight} />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* </StyledDashboarditems> */}
-
-          {/* <StyledDashboarditems> */}
-          <div className='item right-two '>
-            <header>Top {topBenfits.length} Benefits</header>
-            <section>
-              {topBenfits.map((item, i) => (
-                <article key={i + item.title}>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                </article>
-              ))}
-            </section>
-          </div>
-          {/* </StyledDashboarditems> */}
-
-          {/* <StyledDashboarditems> */}
-          <div className='item bottom '>
-            <header>Network of Partners</header>
-            <section>
-              {networkPartners.map((item, i) => (
-                <div key={i + item.title} className='network'>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </section>
-          </div>
-          {/* </StyledDashboarditems> */}
-        </div>
-      </StyledDashBoard>
-
-      <StyledAbout>
-        <div className='content'>
-          <header>Who we are and what we do</header>
-          {about.map((item) => (
-            <div
-              className='caption'
-              dangerouslySetInnerHTML={{ __html: item.caption }}
-            />
-            // <div key={item.id}>{dangerouslySetInnerHTML={{_html : item.caption}}} </div>
-          ))}
-        </div>
-      </StyledAbout>
-      {/* this is the footer component thinking about making it into a jspn structure */}
       <Footer />
-    </StyledLayout>
+    </>
+  );
+};
+
+const Dashboard = ({ title, text, images, index, next }) => {
+  return (
+    <>
+      <Container>
+        <Grid>
+          <>
+            {/* left 1 */}
+            <Grid.Column width='11' stretched>
+              <Segment>
+                <Grid>
+                  <Grid.Column width='7'>
+                    <Header as='h3'>Onboarding</Header>
+                    <Header size='medium'>
+                      Complete These Steps to start working with blinkhub
+                    </Header>
+                    <Header size='small'>2 Completed / 3</Header>
+                  </Grid.Column>
+                  <Grid.Column width='9'>
+                    <ul className=''>
+                      {onboarding.map((item, index) => (
+                        <Header size='tiny' key={index + item.text}>
+                          <Icon name='check circle' color='yellow' />
+                          <Header.Content>{item.text}</Header.Content>
+                        </Header>
+                      ))}
+                    </ul>
+                  </Grid.Column>
+                </Grid>
+              </Segment>
+            </Grid.Column>
+
+            {/* right 1 */}
+            <Grid.Column width='5' stretched>
+              <Segment>
+                <Header color='blue' as='h3'>
+                  Business Clinic
+                  <Icon size='tiny' name='info circle' color='blue' />
+                </Header>
+                <p>
+                  Our business advice and support will save you time and money,
+                  allowing you to concentrate on running your business.
+                </p>
+              </Segment>
+            </Grid.Column>
+
+            {/*left 2  */}
+            <Grid.Column width='11' stretched>
+              <Segment>
+                <Grid stretched>
+                  <>
+                    <Grid.Column width='6'>
+                      <Header size='large'>
+                        Top {blinkhubBenefits.length} Benefits of BlinkHub
+                      </Header>
+                      <Header size='medium'>{title}</Header>
+                      <div>
+                        {blinkhubBenefits.map((element, i) => (
+                          <>
+                            <div
+                              key={i + element}
+                              className={`position  ${
+                                i <= index ? "bg-yellow-500" : "bg-red-900"
+                              }`}></div>
+                          </>
+                        ))}
+                      </div>
+                    </Grid.Column>
+
+                    <Grid.Column width='8' className='text'>
+                      <Header size='large'>
+                        <Image
+                          circular
+                          src={images}
+                          alt={title}
+                          className='icon'
+                        />
+                        {text}
+                      </Header>
+                    </Grid.Column>
+
+                    <Grid.Column
+                      width='2'
+                      onClick={next}
+                      verticalAlign='middle'
+                      className='next'>
+                      <Icon name='chevron right' size='large' />
+                    </Grid.Column>
+                  </>
+                </Grid>
+              </Segment>
+            </Grid.Column>
+            {/* right-2 */}
+            <Grid.Column width='5' stretched>
+              <Segment>
+                <Header as='h2' color='blue'>
+                  Top {topBenfits.length} Benefits
+                </Header>
+                <section>
+                  {topBenfits.map((item, i) => (
+                    <article key={i + item.title}>
+                      <Header as='h4'>{item.title}</Header>
+                      <Header.Subheader>{item.text}</Header.Subheader>
+                    </article>
+                  ))}
+                </section>
+              </Segment>
+            </Grid.Column>
+
+            {/* bottom */}
+            <Grid.Column width='16' stretched>
+              <Segment>
+                <Header as='h2' color='blue'>
+                  Network of Partners
+                </Header>
+                <Grid>
+                  {networkPartners.map((item, i) => (
+                    <Grid.Column
+                      computer='5'
+                      tablet='8'
+                      mobile='16'
+                      key={i + item.title}>
+                      <Header as='h4' color='blue'>
+                        {item.title}
+                      </Header>
+                      <p>{item.text}</p>
+                    </Grid.Column>
+                  ))}
+                </Grid>
+              </Segment>
+            </Grid.Column>
+          </>
+        </Grid>
+      </Container>
+    </>
+  );
+};
+
+const WelcomeBanner = () => {
+  return (
+    <>
+      <Container>
+        <Grid>
+          <Grid.Column width='4'>
+            <Image src={Images.BlinkHubLogo} alt='BlinkHubLogo' />
+          </Grid.Column>
+          <Grid.Column width='8'>
+            <Header size='huge'>Welcome</Header>
+            <Header size='small'>To the world of business support</Header>
+          </Grid.Column>
+        </Grid>
+      </Container>
+    </>
+  );
+};
+
+const About = () => {
+  return (
+    <div>
+      <Container>
+        <Segment>
+          <Header color='blue' size='huge'>
+            Who we are and what we do
+          </Header>
+          <Divider hidden />
+          {about.map((item, index) => (
+            <Header key={index} size='small'>
+              <div dangerouslySetInnerHTML={{ __html: item.caption }} />
+            </Header>
+          ))}
+        </Segment>
+        <Divider section hidden />
+      </Container>
+    </div>
   );
 };
 
