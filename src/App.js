@@ -8,6 +8,7 @@ import {
   LoginPage,
   LandingPage,
   TermsOfUse,
+  Home,
 } from "./Containers/index";
 import { GlobalStyle } from "./GlobalStyle";
 
@@ -83,6 +84,7 @@ function App() {
               {/* <Route path='/login' exact component={LoginPage} /> */}
               <Route path='/EcoPrefrences' component={EcoPrefenceWrapper} />
               <Route path='/terms-of-use' component={TermsOfUse} />
+              <Route path='/home' component={Home} />
               <Route path='/' exact component={LandingPage} />
             </Switch>
           </div>

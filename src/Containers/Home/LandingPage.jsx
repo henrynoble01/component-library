@@ -65,136 +65,113 @@ const LandingPage = () => {
 const Dashboard = ({ title, text, images, index, next }) => {
   return (
     <>
-      <Container>
-        <Grid>
-          <>
-            {/* left 1 */}
-            <Grid.Column width='11' stretched>
-              <Segment>
-                <Grid>
-                  <Grid.Column width='7'>
-                    <Header as='h3'>Onboarding</Header>
-                    <Header size='medium'>
-                      Complete These Steps to start working with blinkhub
-                    </Header>
-                    <Header size='small'>2 Completed / 3</Header>
-                  </Grid.Column>
-                  <Grid.Column width='9'>
-                    <ul className=''>
-                      {onboarding.map((item, index) => (
-                        <Header size='tiny' key={index + item.text}>
-                          <Icon name='check circle' color='yellow' />
-                          <Header.Content>{item.text}</Header.Content>
-                        </Header>
-                      ))}
-                    </ul>
-                  </Grid.Column>
-                </Grid>
-              </Segment>
-            </Grid.Column>
-
-            {/* right 1 */}
-            <Grid.Column width='5' stretched>
-              <Segment>
-                <Header color='blue' as='h3'>
-                  Business Clinic
-                  <Icon size='tiny' name='info circle' color='blue' />
-                </Header>
-                <p>
-                  Our business advice and support will save you time and money,
-                  allowing you to concentrate on running your business.
+      <div className='dashboard'>
+        <div className='content'>
+          {/* <StyledDashboarditems> */}
+          <div className='item  left-one '>
+            <div className='inner '>
+              <div className='circle w-2/5 text-white'>
+                <h3 className='text-2xl  font-bold mb-3'>Onboarding</h3>
+                <p className=' text-lg w-11/12 font-semibold mb-3'>
+                  Complete These Steps to start working with blinkhub
                 </p>
-              </Segment>
-            </Grid.Column>
-
-            {/*left 2  */}
-            <Grid.Column width='11' stretched>
-              <Segment>
-                <Grid stretched>
-                  <>
-                    <Grid.Column width='6'>
-                      <Header size='large'>
-                        Top {blinkhubBenefits.length} Benefits of BlinkHub
-                      </Header>
-                      <Header size='medium'>{title}</Header>
-                      <div>
-                        {blinkhubBenefits.map((element, i) => (
-                          <>
-                            <div
-                              key={i + element.id}
-                              className={`position  ${
-                                i <= index ? "bg-yellow-500" : "bg-red-900"
-                              }`}></div>
-                          </>
-                        ))}
-                      </div>
-                    </Grid.Column>
-
-                    <Grid.Column width='8' className='text'>
-                      <Header size='large'>
-                        <Image
-                          circular
-                          src={images}
-                          alt={title}
-                          className='icon'
-                        />
-                        {text}
-                      </Header>
-                    </Grid.Column>
-
-                    <Grid.Column
-                      width='2'
-                      onClick={next}
-                      verticalAlign='middle'
-                      className='next'>
-                      <Icon name='chevron right' size='large' />
-                    </Grid.Column>
-                  </>
-                </Grid>
-              </Segment>
-            </Grid.Column>
-            {/* right-2 */}
-            <Grid.Column width='5' stretched>
-              <Segment>
-                <Header as='h2' color='blue'>
-                  Top {topBenfits.length} Benefits
-                </Header>
-                <section>
-                  {topBenfits.map((item, i) => (
-                    <article key={i + item.title}>
-                      <Header as='h4'>{item.title}</Header>
-                      <Header.Subheader>{item.text}</Header.Subheader>
-                    </article>
+                <p className='text-lg font-normal'>2 Completed / 3</p>
+                {/* <div className='steps stepper'>
+                <div className='line completed'></div>
+                <div className='line completed'></div>
+                <div className='line '></div>
+              </div> */}
+              </div>
+              <div className='steps-list w-3/5  flex items-center  pl-5 '>
+                <ul className='flex gap-y-3 flex-col  '>
+                  {onboarding.map((item, index) => (
+                    <li
+                      key={index + item.text}
+                      className='flex gap-x-3  items-start '>
+                      <Icon name='check circle' color='yellow' />
+                      <span className='text-lg'>{item.text}</span>
+                    </li>
                   ))}
-                </section>
-              </Segment>
-            </Grid.Column>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* </StyledDashboarditems> */}
 
-            {/* bottom */}
-            <Grid.Column width='16' stretched>
-              <Segment>
-                <Header as='h2' color='blue'>
-                  Network of Partners
-                </Header>
-                <Grid>
-                  {networkPartners.map((item, i) => (
-                    <Grid.Column
-                      computer='5'
-                      tablet='8'
-                      mobile='16'
-                      key={i + item.title}>
-                      <Header as='h4' color='blue'>
-                        {item.title}
-                      </Header>
-                      <p>{item.text}</p>
-                    </Grid.Column>
-                  ))}
-                </Grid>
-              </Segment>
-            </Grid.Column>
-          </>
-        </Grid>
-      </Container>
+          {/* <StyledDashboarditems> */}
+          <div className='item right-one '>
+            <header>
+              Business Clinic
+              <Icon size='tiny' name='info circle' color='blue' />
+            </header>
+            <p>
+              Our business advice and support will save you time and money,
+              allowing you to concentrate on running your business.
+            </p>
+          </div>
+          {/* </StyledDashboarditems> */}
+
+          {/* <StyledDashboarditems> */}
+          <div className='item left-two   '>
+            {/* <header className='header'>Blinkhub Benfits</header> */}
+            <div className='benefits'>
+              <div className='card'>
+                <div className='circle '>
+                  <h3>Top {blinkhubBenefits.length} Benefits of BlinkHub</h3>
+                  <p>{title}</p>
+                  <div className='slide-index '>
+                    {blinkhubBenefits.map((element, i) => (
+                      <>
+                        <div
+                          key={i + element}
+                          className={`position  ${
+                            i <= index ? "bg-yellow-500" : "bg-red-900"
+                          }`}></div>
+                      </>
+                    ))}
+                  </div>
+                </div>
+                <div className='text'>
+                  <img src={images} alt={title} className='icon' />
+                  <span>{text}</span>
+                </div>
+                <div onClick={next} className='next'>
+                  <Icon name='chevron right' size='large' />
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* </StyledDashboarditems> */}
+
+          {/* <StyledDashboarditems> */}
+          <div className='item right-two '>
+            <header>Top {topBenfits.length} Benefits</header>
+            <section>
+              {topBenfits.map((item, i) => (
+                <article key={i + item.title}>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </article>
+              ))}
+            </section>
+          </div>
+          {/* </StyledDashboarditems> */}
+
+          {/* <StyledDashboarditems> */}
+          <div className='item bottom '>
+            <header>Network of Partners</header>
+            <section>
+              {networkPartners.map((item, i) => (
+                <div key={i + item.title} className='network'>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </section>
+          </div>
+          {/* </StyledDashboarditems> */}
+        </div>
+      </div>
     </>
   );
 };
